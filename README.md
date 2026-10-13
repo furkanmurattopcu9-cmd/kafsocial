@@ -14,3 +14,4 @@ A lightweight, responsive single-page website for FMT Visual, a web design and 3
 - Connect a real contact email or secure form endpoint. The current form only prepares/copies a project brief in the browser.
 - Confirm package scope and pricing.
 - Attach the chosen domain and review legal/privacy requirements before collecting real user information.
+- This is an isolated preview branch; it does not modify the KAF Social production branch or its domains.
