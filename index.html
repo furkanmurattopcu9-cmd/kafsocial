@@ -714,9 +714,249 @@
       .visual-rail-track { transform: none !important; }
     }
 
+  
+    /* FMT VISUAL — PREMIUM ART-DIRECTION PASS 02 */
+    :root {
+      --paper: #f3f0e8;
+      --white: #fffdf7;
+      --ink: #141414;
+      --ink-soft: #262722;
+      --muted: #686960;
+      --line: #c9c6bc;
+      --ice: #d8ff38;
+      --ice-strong: #3048ff;
+      --ice-pale: #e7edff;
+      --dark: #141414;
+      --paper-deep: #e8e4da;
+    }
+    html { scroll-padding-top: 88px; }
+    body { background: var(--paper); }
+    .studio-topline { position: relative; z-index: 51; background: var(--ink); color: var(--paper); }
+    .studio-topline-inner { display: flex; align-items: center; justify-content: space-between; min-height: 28px; gap: 18px; font-size: 8px; font-weight: 800; letter-spacing: .14em; }
+    .studio-topline-inner span { display: inline-flex; align-items: center; gap: 8px; }
+    .studio-topline-inner i { display: inline-block; width: 6px; height: 6px; background: var(--acid); border-radius: 50%; }
+    .studio-topline-inner b { padding-inline: 5px; color: var(--acid); font-size: 11px; }
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(243,240,232,.92); border-bottom: 1px solid rgba(20,20,20,.16); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    .nav { min-height: 76px; }
+    .brand-mark { width: 32px; height: 32px; }
+    .brand-name { font-size: 21px; letter-spacing: -.09em; }
+    .brand-sub { font-size: 7px; letter-spacing: .25em; }
+    .nav-links { font-size: 9px; letter-spacing: .12em; }
+    .nav-actions .button { min-height: 42px; }
+    .hero { padding: 48px 0 0; }
+    .hero-copy { padding-bottom: 32px; }
+    .hero-copy h1 { max-width: 1280px; margin-top: 30px; margin-bottom: 25px; font-size: clamp(64px, 10.1vw, 142px); line-height: .82; letter-spacing: -.105em; }
+    .hero-copy h1 .accent { display: block; font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-style: italic; letter-spacing: -.09em; text-transform: none; color: var(--blue); }
+    .hero-copy > p { max-width: 610px; font-size: 15px; line-height: 1.8; }
+    .hero-tag { font-size: 9px; letter-spacing: .13em; }
+    .hero-art.hero-collage { aspect-ratio: 2.55 / 1; min-height: 0; overflow: hidden; background: #e9e5db; isolation: isolate; }
+    .collage-backplate { inset: 0; border: 0; border-radius: 0; background-image: linear-gradient(rgba(20,20,20,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(20,20,20,.07) 1px, transparent 1px), linear-gradient(125deg,#e8e4da,#f6f3ec 55%,#d7d3ca); background-size: 36px 36px,36px 36px,auto; transform: none; }
+    .hero-photo { border: 0; border-radius: 0; box-shadow: none; }
+    .hero-photo-main { inset: 0 33.4% 0 0; transform: none; animation: hero-main-zoom 20s ease-in-out infinite alternate; }
+    .hero-photo-main img { filter: saturate(.82) contrast(1.05); }
+    .hero-photo-social { top: 0; left: auto; right: 0; width: 32.8%; height: 49.2%; transform: none; animation: hero-side-zoom 19s .3s ease-in-out infinite alternate; }
+    .hero-photo-web { bottom: 0; right: 0; width: 32.8%; height: 49.2%; transform: none; animation: hero-side-zoom 22s .7s ease-in-out infinite alternate; }
+    .hero-photo figcaption { left: 12px; bottom: 12px; padding: 8px 10px; background: var(--acid); color: var(--ink); font-size: 8px; letter-spacing: .12em; }
+    .hero-float-tag { top: 14px; left: 14px; right: auto; border: 0; border-radius: 0; padding: 9px 11px; background: var(--paper); color: var(--ink); box-shadow: none; font-size: 8px; }
+    .hero-float-card { left: 14px; bottom: 14px; right: auto; top: auto; border: 0; border-radius: 0; background: var(--ink); color: white; box-shadow: none; }
+    .hero-float-card small { color: #bcbcb3; }
+    .float-card-icon { background: var(--acid); color: var(--ink); border-radius: 0; }
+    .float-card-bars i { background: var(--acid); }
+    .hero-stamp { position: absolute; z-index: 8; top: 12px; right: 12px; width: clamp(76px, 9vw, 116px); aspect-ratio: 1; color: var(--acid); animation: stamp-turn 28s linear infinite; pointer-events: none; }
+    .hero-stamp svg { display: block; width: 100%; height: 100%; overflow: visible; }
+    .stamp-outline { fill: var(--ink); stroke: var(--acid); stroke-width: 1; }
+    .stamp-ring-text { fill: var(--acid); font-size: 8px; font-weight: 800; letter-spacing: 1.3px; }
+    .stamp-center { fill: var(--acid); }
+    .stamp-center-text { fill: var(--ink); font-family: Arial, sans-serif; font-size: 13px; font-weight: 900; letter-spacing: -1px; text-anchor: middle; }
+    .hero-scrollline { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; min-height: 54px; border-bottom: 1px solid var(--ink); color: #5e5d55; font-size: 8px; font-weight: 800; letter-spacing: .13em; }
+    .hero-scrollline > span:last-child { text-align: right; }
+    .hero-scrollline a { display: inline-flex; align-items: center; gap: 14px; color: var(--ink); }
+    .scrollline-track { display: inline-block; width: 38px; height: 1px; background: var(--blue); position: relative; overflow: hidden; }
+    .scrollline-track::after { content: ""; position: absolute; inset: 0; background: var(--acid); transform: translateX(-100%); animation: scrollline-sweep 1.8s ease-in-out infinite; }
+    .trust-strip { padding: 18px 0; background: var(--paper); color: var(--ink); border-bottom: 1px solid var(--ink); }
+    .trust-items { gap: 20px; font-size: 9px; }
+    .trust-items svg { color: var(--blue); }
+    .capability-marquee { padding: 18px 0; }
+    .capability-track span { font-size: 10px; letter-spacing: .15em; }
+    .section-head { margin-bottom: 56px; }
+    .section-head h2 { font-size: clamp(42px, 6vw, 78px); line-height: .9; letter-spacing: -.09em; }
+    .section-head h2 .accent { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 500; text-transform: none; letter-spacing: -.08em; color: var(--blue); }
+    .section-head h2 .accent::after { display: none; }
+    .section-head p { font-size: 13px; line-height: 1.8; }
+    .eyebrow { font-size: 9px; letter-spacing: .18em; }
+    .services-section { padding-top: 110px; padding-bottom: 112px; }
+    .service-visual-card { position: relative; grid-template-columns: 86px minmax(0,1fr) minmax(260px,.72fr); gap: 32px; padding: 22px 0; transition: background .35s ease; }
+    .service-visual-card::before { content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform .55s var(--ease); }
+    .service-visual-card:hover::before { transform: scaleX(1); }
+    .service-number { min-width: 72px; padding: 8px 9px; font-size: 9px; letter-spacing: .1em; }
+    .service-mini-label { font-size: 8px; letter-spacing: .17em; }
+    .service-visual-copy h3 { font-size: clamp(32px, 4vw, 52px); line-height: .9; letter-spacing: -.085em; }
+    .service-visual-copy p { max-width: 400px; font-size: 12px; line-height: 1.8; }
+    .service-visual-image { height: 178px; background: #d5d1c7; clip-path: polygon(5% 0,100% 0,100% 100%,0 100%); }
+    .service-visual-card:nth-child(2) .service-visual-image { clip-path: polygon(0 0,100% 5%,100% 100%,0 100%); }
+    .service-visual-card:nth-child(3) .service-visual-image { clip-path: polygon(0 0,100% 0,95% 100%,0 100%); }
+    .service-visual-card:nth-child(4) .service-visual-image { clip-path: polygon(0 5%,100% 0,100% 100%,0 100%); }
+    .service-visual-image img { filter: grayscale(.15) contrast(1.04); transition: transform .8s var(--ease), filter .8s ease; }
+    .service-visual-card:hover .service-visual-image img { filter: grayscale(0) contrast(1.04); }
+    .service-arrow { width: 34px; height: 34px; border-radius: 50%; }
+    .manifesto-section { position: relative; overflow: hidden; padding: 86px 0 92px; background: var(--paper-deep); color: var(--ink); }
+    .manifesto-section::after { content: "F"; position: absolute; right: -2vw; top: 0; color: rgba(20,20,20,.035); font-size: clamp(280px, 45vw, 620px); line-height: .8; font-weight: 900; letter-spacing: -.13em; pointer-events: none; }
+    .manifesto-section .container { position: relative; z-index: 1; }
+    .manifesto-topline { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 16px; border-bottom: 1px solid rgba(20,20,20,.28); }
+    .manifesto-note { color: #77766e; font-size: 8px; font-weight: 800; letter-spacing: .16em; }
+    .manifesto-layout { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(230px,.6fr); align-items: end; gap: 8%; padding: 46px 0 64px; }
+    .manifesto-layout h2 { max-width: 900px; margin: 0; font-size: clamp(48px, 7.8vw, 104px); font-weight: 900; line-height: .84; letter-spacing: -.105em; text-transform: uppercase; }
+    .manifesto-layout h2 em { display: block; margin-top: .12em; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-style: italic; letter-spacing: -.09em; text-transform: none; }
+    .manifesto-aside { max-width: 300px; padding: 0 0 4px 22px; border-left: 1px solid var(--ink); }
+    .manifesto-symbol { display: inline-block; margin-bottom: 12px; color: var(--blue); font-size: 31px; animation: symbol-turn 16s linear infinite; }
+    .manifesto-aside p { margin: 0 0 20px; color: #56564f; font-size: 13px; line-height: 1.8; }
+    .manifesto-aside a { display: inline-flex; align-items: center; gap: 10px; font-size: 9px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    .manifesto-aside a svg { width: 16px; height: 16px; color: var(--blue); transition: transform .25s ease; }
+    .manifesto-aside a:hover svg { transform: translateX(4px); }
+    .manifesto-principles { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-top: 1px solid var(--ink); }
+    .manifesto-principles article { padding: 20px 26px 0 0; }
+    .manifesto-principles article + article { padding-left: 24px; border-left: 1px solid rgba(20,20,20,.25); }
+    .manifesto-principles article > span { color: var(--blue); font-size: 8px; font-weight: 900; letter-spacing: .15em; }
+    .manifesto-principles h3 { margin: 18px 0 8px; font-size: 18px; font-weight: 900; letter-spacing: -.05em; text-transform: uppercase; }
+    .manifesto-principles p { max-width: 310px; margin: 0; color: #5d5c55; font-size: 12px; line-height: 1.75; }
+    .portfolio { background: #222fcb; }
+    .portfolio .section-head { margin-bottom: 46px; }
+    .portfolio .section-head h2 { font-size: clamp(42px, 6vw, 76px); }
+    .portfolio .section-head h2 .accent { color: var(--acid); }
+    .visual-rail { padding: 4px 0 16px; }
+    .visual-rail-track { gap: 12px; }
+    .visual-tile { flex-basis: 300px; height: 390px; border: 1px solid rgba(255,255,255,.22); }
+    .visual-tile.tile-tall { height: 430px; }
+    .visual-tile.tile-wide { flex-basis: 390px; }
+    .visual-tile img { filter: saturate(.85); }
+    .visual-tile:hover img { filter: saturate(1.12); }
+    .visual-tile figcaption { left: 20px; bottom: 20px; }
+    .visual-tile figcaption strong { font-size: 26px; letter-spacing: -.06em; }
+    .portfolio .project-disclaimer { max-width: 560px; color: rgba(255,255,255,.72); font-size: 10px; line-height: 1.7; }
+    #surec { padding-top: 112px; padding-bottom: 112px; }
+    .process-grid { gap: 18px; }
+    .process-step { position: relative; padding: 22px 18px 8px 0; border-top-width: 1px; }
+    .process-step::before { display: block; color: var(--blue); font-family: Georgia, "Times New Roman", serif; font-size: 54px; font-weight: 500; line-height: 1; }
+    .process-step h3 { margin-top: 25px; font-size: 16px; }
+    .process-step p { font-size: 12px; line-height: 1.8; }
+    .pricing { background: var(--paper-deep); border-block: 1px solid rgba(20,20,20,.18); }
+    .pricing .section-head h2 .accent { color: var(--blue); }
+    .pricing .accent::after { display: none; }
+    .pricing-grid { border: 1px solid var(--ink); background: var(--ink); gap: 1px; }
+    .price-card { background: var(--paper); padding: 30px; }
+    .price-card.featured { background: var(--ink); color: var(--paper); }
+    .price-card.featured .price-name { color: var(--acid); }
+    .price-card.featured .price-badge { background: var(--acid); }
+    .price-card.featured .button-primary { background: var(--acid); color: var(--ink); }
+    .price-card:not(.featured) .button-quiet { background: transparent; }
+    .price-card:not(.featured) .button-quiet:hover { background: var(--ink); color: white; }
+    .pricing-note { max-width: 760px; margin-top: 20px; color: #5e5d56; font-size: 11px; }
+    #sss { background: var(--paper); }
+    .faq-grid { gap: 9%; }
+    .faq-intro h2 { max-width: 500px; font-size: clamp(42px, 5.6vw, 70px); line-height: .88; }
+    .faq-intro p { max-width: 350px; font-size: 13px; line-height: 1.8; }
+    .faq-list { border-top: 1px solid var(--ink); }
+    summary { font-size: 13px; letter-spacing: -.02em; }
+    details p { max-width: 600px; font-size: 12px; line-height: 1.85; }
+    .contact-section { padding: 102px 0; }
+    .contact-copy h2 { max-width: 610px; font-size: clamp(48px, 6.2vw, 82px); line-height: .86; }
+    .contact-copy p { max-width: 430px; font-size: 13px; line-height: 1.8; }
+    .contact-form { gap: 18px 14px; }
+    .field input, .field select, .field textarea { min-height: 48px; }
+    .field textarea { min-height: 120px; }
+    .site-footer { padding: 30px 0 34px; }
+    .footer-row { gap: 24px; }
+    .footer-copy { font-size: 10px; }
+    .footer-links { font-size: 10px; }
+    @keyframes stamp-turn { to { transform: rotate(360deg); } }
+    @keyframes symbol-turn { to { transform: rotate(360deg); } }
+    @keyframes scrollline-sweep { 0% { transform: translateX(-100%); } 60%,100% { transform: translateX(100%); } }
+    @media (max-width: 980px) {
+      .hero-copy h1 { font-size: clamp(58px, 10.4vw, 108px); }
+      .hero-art.hero-collage { aspect-ratio: 1.9 / 1; }
+      .service-visual-card { grid-template-columns: 66px minmax(0,1fr) minmax(200px,.7fr); gap: 20px; }
+      .manifesto-layout { grid-template-columns: minmax(0,1.2fr) minmax(220px,.8fr); gap: 5%; }
+      .manifesto-layout h2 { font-size: clamp(44px, 7vw, 72px); }
+      .manifesto-principles article { padding-right: 16px; }
+      .manifesto-principles article + article { padding-left: 16px; }
+      .visual-tile { flex-basis: 280px; }
+      .visual-tile.tile-wide { flex-basis: 340px; }
+    }
+    @media (max-width: 720px) {
+      .studio-topline-inner { min-height: 25px; font-size: 7px; letter-spacing: .08em; }
+      .studio-topline-inner span:last-child { display: none; }
+      .nav { min-height: 66px; }
+      .nav-links { top: 66px; }
+      .hero { padding-top: 35px; }
+      .hero-copy h1 { font-size: clamp(48px, 12vw, 72px); line-height: .86; }
+      .hero-copy > p { font-size: 13px; }
+      .hero-art.hero-collage { aspect-ratio: .95 / 1; }
+      .hero-photo-main { inset: 0 0 34% 0; }
+      .hero-photo-social { top: auto; bottom: 0; left: 0; right: auto; width: 49.5%; height: 33%; }
+      .hero-photo-web { bottom: 0; right: 0; width: 49.5%; height: 33%; }
+      .hero-float-tag { top: 9px; left: 9px; font-size: 7px; }
+      .hero-float-card { left: 9px; bottom: calc(33% + 9px); padding: 8px; min-width: 130px; }
+      .hero-stamp { top: 8px; right: 8px; width: 76px; }
+      .hero-scrollline { grid-template-columns: 1fr auto; gap: 10px; min-height: 48px; font-size: 7px; }
+      .hero-scrollline > span:last-child { display: none; }
+      .hero-scrollline a { gap: 8px; }
+      .scrollline-track { width: 24px; }
+      .trust-items { gap: 13px 16px; }
+      .trust-items span { font-size: 8px; }
+      .section-head { margin-bottom: 34px; }
+      .section-head h2 { font-size: clamp(38px, 10vw, 56px); line-height: .92; }
+      .services-section { padding-top: 76px; padding-bottom: 78px; }
+      .service-visual-card { grid-template-columns: 48px minmax(0,1fr); grid-template-areas: "number copy" "image image"; gap: 10px 14px; padding: 17px 0; }
+      .service-number { min-width: 0; padding: 7px; font-size: 8px; }
+      .service-visual-copy { padding: 0 42px 8px 0; }
+      .service-visual-copy h3 { font-size: clamp(28px, 7vw, 38px); }
+      .service-visual-image { height: 190px; clip-path: none !important; }
+      .manifesto-section { padding: 65px 0 68px; }
+      .manifesto-topline { align-items: start; }
+      .manifesto-layout { grid-template-columns: 1fr; gap: 28px; padding: 34px 0 42px; }
+      .manifesto-layout h2 { font-size: clamp(43px, 11vw, 64px); line-height: .9; }
+      .manifesto-aside { max-width: 450px; margin-left: auto; padding-left: 17px; }
+      .manifesto-principles { grid-template-columns: 1fr; }
+      .manifesto-principles article, .manifesto-principles article + article { padding: 18px 0; border-left: 0; border-bottom: 1px solid rgba(20,20,20,.25); }
+      .manifesto-principles article:last-child { border-bottom: 0; }
+      .manifesto-principles h3 { margin: 10px 0 6px; }
+      .portfolio .section-head h2 { font-size: clamp(38px, 10vw, 56px); }
+      .visual-tile { flex-basis: 245px; height: 325px; }
+      .visual-tile.tile-tall { height: 355px; }
+      .visual-tile.tile-wide { flex-basis: 285px; }
+      #surec { padding-top: 76px; padding-bottom: 76px; }
+      .process-grid { grid-template-columns: 1fr 1fr; gap: 22px 16px; }
+      .process-step::before { font-size: 38px; }
+      .process-step h3 { margin-top: 18px; font-size: 14px; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .price-card { padding: 24px; }
+      .price-summary { min-height: 0; }
+      .faq-grid { grid-template-columns: 1fr; gap: 24px; }
+      .faq-intro h2 { font-size: clamp(40px, 10vw, 56px); }
+      .contact-section { padding: 72px 0; }
+      .contact-panel { grid-template-columns: 1fr; gap: 30px; }
+      .contact-copy h2 { font-size: clamp(44px, 11vw, 60px); }
+      .contact-form { grid-template-columns: 1fr; }
+      .field.full, .form-foot, .form-note { grid-column: 1; }
+      .footer-row { flex-wrap: wrap; align-items: flex-start; }
+      .footer-links { width: 100%; flex-wrap: wrap; gap: 12px 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-photo-main, .hero-photo-social, .hero-photo-web, .hero-stamp, .manifesto-symbol, .scrollline-track::after, .capability-track, .visual-rail-track { animation: none !important; }
+      .hero-photo img, .service-visual-image img, .manifesto-aside a svg { transition: none !important; }
+      .visual-rail { overflow-x: auto; }
+      .visual-rail-track { transform: none !important; }
+    }
+
   </style>
 </head>
 <body>
+    <div class="studio-topline" aria-label="FMT Visual stüdyo bilgisi">
+    <div class="container studio-topline-inner">
+      <span><i aria-hidden="true"></i> FMT VISUAL / INDEPENDENT CREATIVE STUDIO</span>
+      <span>STRATEGY <b>×</b> DESIGN <b>×</b> DIGITAL</span>
+    </div>
+  </div>
   <header class="site-header">
     <nav class="nav container" aria-label="Ana navigasyon">
       <a class="brand" href="#anasayfa" aria-label="FMT Visual ana sayfa">
@@ -742,7 +982,7 @@
         <div class="hero-copy">
           <div class="hero-tag"><span class="status-dot"></span> Bağımsız yaratıcı stüdyo / Sosyal · 3D · Web · Meta Ads</div>
           <h1>Sıradan değil. <span class="accent">Görünür ol.</span></h1>
-          <p>Sosyal medya, 3D, web ve Meta reklamları için markanın fark edilmesini sağlayan görsel sistemler üretiyorum. Daha az şablon, daha çok karakter.</p>
+          <p>Sosyal medya, 3D, web ve Meta reklamları için yalnızca güzel görünen işler değil; markanın karakterini taşıyan, amaca hizmet eden görsel deneyimler tasarlıyorum.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#iletisim">Bir proje başlat <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
             <a class="button button-quiet" href="#projeler">İşleri keşfet</a>
@@ -772,12 +1012,26 @@
             <span><strong>Meta Ads</strong><small>Creative direction</small></span>
             <span class="float-card-bars"><i></i><i></i><i></i><i></i><i></i></span>
           </div>
+          <div class="hero-stamp" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <defs><path id="heroStampCirclePath" d="M 60,60 m -43,0 a 43,43 0 1,1 86,0 a 43,43 0 1,1 -86,0"/></defs>
+              <circle class="stamp-outline" cx="60" cy="60" r="57"/>
+              <text class="stamp-ring-text"><textPath href="#heroStampCirclePath">DESIGN WITH INTENT · MADE TO BE SEEN · </textPath></text>
+              <circle class="stamp-center" cx="60" cy="60" r="27"/>
+              <text class="stamp-center-text" x="60" y="65">FMT</text>
+            </svg>
+          </div>
           <div class="hero-orbit hero-orbit-a"></div>
           <div class="hero-orbit hero-orbit-b"></div>
         </div>
       </div>
     </section>
 
+    <div class="hero-scrollline container" aria-label="Sayfayı keşfet">
+      <span>01 — CREATIVE STUDIO</span>
+      <a href="#hizmetler">SCROLL TO EXPLORE <span class="scrollline-track" aria-hidden="true"></span></a>
+      <span>VISUAL THINKING / DIGITAL CRAFT</span>
+    </div>
     <div class="trust-strip">
       <div class="container trust-items">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg> Sosyal medya tasarımı</span>
@@ -824,6 +1078,27 @@
       </div>
     </section>
 
+    <section class="manifesto-section" aria-labelledby="manifestoTitle">
+      <div class="container">
+        <div class="manifesto-topline">
+          <span class="eyebrow">Yaratıcı yaklaşım</span>
+          <span class="manifesto-note">FMT / NOTE 001</span>
+        </div>
+        <div class="manifesto-layout">
+          <h2 id="manifestoTitle">Güzel görünmek yetmez. <em>Bir iz bırakmalı.</em></h2>
+          <div class="manifesto-aside">
+            <span class="manifesto-symbol" aria-hidden="true">✳</span>
+            <p>Her tasarımın bir nedeni, her hareketin bir ritmi, her markanın kendine ait bir karakteri olmalı. Ben de işi tam burada başlatıyorum.</p>
+            <a href="#surec">Yaratıcı yaklaşımı keşfet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+        <div class="manifesto-principles">
+          <article><span>01 / AMAÇ</span><h3>Önce fikir.</h3><p>Görsel kararlar, projenin hedefinden ve anlatmak istediği şeyden doğar.</p></article>
+          <article><span>02 / KARAKTER</span><h3>Şablon değil, kimlik.</h3><p>Her markaya aynı görünümü vermek yerine kendine ait bir dil kurulur.</p></article>
+          <article><span>03 / TUTARLILIK</span><h3>Her temas aynı hikâye.</h3><p>Sosyal medya, web ve reklam kreatifleri aynı yaratıcı yönün parçası olur.</p></article>
+        </div>
+      </div>
+    </section>
     <section class="section portfolio" id="projeler">
       <div class="container">
         <div class="section-head reveal">
