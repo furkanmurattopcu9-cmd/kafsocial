@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f9fa">
-  <meta name="description" content="FMT Visual; sosyal medya tasarımı, 3D modelleme, modern web siteleri ve Meta reklam kreatiflerini tek bir yaratıcı stüdyoda buluşturur.">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta name="description" content="FMT Visual; sosyal medya tasarımı, 3D modelleme, web tasarımı ve Meta reklam kreatifleri için cesur, özgün dijital işler üretir.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="FMT Visual — Sosyal Medya, 3D, Web &amp; Meta Ads">
-  <meta property="og:description" content="Markan için sosyal medya tasarımları, 3D görselleştirme, web siteleri ve Meta reklam kreatifleri.">
+  <meta property="og:title" content="FMT Visual — Yaratıcı Dijital Stüdyo">
+  <meta property="og:description" content="Sosyal medya, 3D, web tasarımı ve Meta reklam kreatifleri. Sıradan değil, görünür ol.">
   <meta property="og:site_name" content="FMT Visual">
-  <title>FMT Visual — Sosyal Medya, 3D, Web &amp; Meta Ads</title>
+  <title>FMT Visual — Yaratıcı Dijital Stüdyo</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <style>
     :root {
@@ -465,13 +465,262 @@
       .visual-rail-track { transform: none !important; }
     }
 
+  
+    /* FMT VISUAL — EDITORIAL ART-DIRECTION REFRESH */
+    :root {
+      color-scheme: light;
+      --paper: #f3f0e8;
+      --white: #fffdf7;
+      --ink: #111111;
+      --ink-soft: #292923;
+      --muted: #696960;
+      --line: #c9c6bc;
+      --ice: #d8ff38;
+      --ice-strong: #3048ff;
+      --ice-pale: #e7edff;
+      --dark: #111111;
+      --radius: 0;
+      --shadow: none;
+      --ease: cubic-bezier(.2,.75,.25,1);
+      --acid: #d8ff38;
+      --blue: #3048ff;
+      --paper-deep: #e9e5db;
+    }
+    body { background: var(--paper); font-family: Arial, Helvetica, sans-serif; }
+    .container { width: min(1320px, calc(100% - 64px)); }
+    .site-header { position: relative; top: auto; background: var(--paper); border-bottom: 2px solid var(--ink); backdrop-filter: none; -webkit-backdrop-filter: none; }
+    .nav { min-height: 84px; }
+    .brand { gap: 12px; }
+    .brand-mark { color: var(--ink); }
+    .brand-name { font-size: 20px; font-weight: 900; letter-spacing: -.08em; }
+    .brand-sub { color: #5d5d54; font-size: 8px; letter-spacing: .24em; }
+    .nav-links { gap: clamp(14px, 2vw, 30px); color: var(--ink); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links a:hover { color: var(--blue); }
+    .button { min-height: 48px; padding: 0 18px; border: 1px solid var(--ink); border-radius: 0; font-size: 10px; font-weight: 850; letter-spacing: .075em; text-transform: uppercase; transition: transform .2s ease, background .2s ease, color .2s ease; }
+    .button-primary { color: var(--ink); background: var(--acid); box-shadow: none; }
+    .button-primary:hover { background: var(--blue); color: white; box-shadow: none; }
+    .button-dark { color: white; background: var(--ink); }
+    .button-dark:hover { background: var(--blue); }
+    .button-quiet { background: transparent; border-color: var(--ink); color: var(--ink); }
+    .button-quiet:hover { background: var(--ink); color: white; border-color: var(--ink); }
+    .menu-toggle { border-radius: 0; border-color: var(--ink); background: var(--acid); }
+    .eyebrow { color: var(--blue); font-size: 10px; font-weight: 850; letter-spacing: .19em; }
+    .eyebrow::before { width: 8px; height: 8px; border-radius: 0; background: var(--acid); }
+    .section { padding: 120px 0; }
+    .section-head { align-items: start; gap: 44px; margin-bottom: 52px; }
+    .section-head h2 { max-width: 900px; margin: 17px 0 0; font-size: clamp(42px, 6.3vw, 82px); line-height: .9; letter-spacing: -.085em; font-weight: 900; text-transform: uppercase; }
+    .section-head p { max-width: 350px; margin: 10px 0 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+    .accent { color: var(--blue); white-space: normal; }
+    .accent::after { height: .12em; bottom: -.03em; left: 0; right: 0; border-radius: 0; background: var(--acid); opacity: 1; }
+    .hero { padding: 52px 0 0; overflow: hidden; }
+    .hero-grid { display: block; width: min(1320px, calc(100% - 64px)); min-height: 0; margin-inline: auto; }
+    .hero-copy { display: grid; grid-template-columns: minmax(0, 1fr) minmax(270px, 340px); grid-template-areas: "tag tag" "title title" "desc actions" "notes notes"; gap: 0 38px; padding: 16px 0 42px; }
+    .hero-tag { grid-area: tag; display: inline-flex; justify-self: start; gap: 10px; padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--ink); font-size: 10px; font-weight: 850; letter-spacing: .16em; text-transform: uppercase; }
+    .status-dot { background: var(--blue); border-radius: 0; box-shadow: none; }
+    .hero-copy h1 { grid-area: title; max-width: 1300px; margin: 28px 0 28px; font-size: clamp(62px, 10.5vw, 148px); line-height: .81; letter-spacing: -.095em; font-weight: 900; text-transform: uppercase; }
+    .hero-copy h1 .accent { display: block; color: var(--blue); }
+    .hero-copy h1 .accent::after { display: none; }
+    .hero-copy > p { grid-area: desc; align-self: center; max-width: 360px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.72; }
+    .hero-actions { grid-area: actions; align-self: center; justify-content: flex-start; gap: 8px; margin: 0; }
+    .hero-notes { grid-area: notes; gap: 24px; margin-top: 38px; padding-top: 15px; border-top: 1px solid var(--ink); color: var(--ink); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .hero-notes svg { color: var(--blue); }
+    .hero-art { width: 100%; min-height: 0; aspect-ratio: 2.55 / 1; margin: 0; border: 0; border-radius: 0; background: var(--ink); overflow: hidden; }
+    .hero-photo { border: 0; border-radius: 0; background: #222; box-shadow: none; }
+    .hero-photo-main { inset: 0 33.4% 0 0; transform: none; animation: hero-main-zoom 16s ease-in-out infinite alternate; }
+    .hero-photo-social { z-index: 4; left: auto; top: 0; right: 0; width: 32.8%; height: 49.2%; transform: none; animation: hero-side-zoom 17s ease-in-out infinite alternate; }
+    .hero-photo-web { z-index: 5; right: 0; bottom: 0; width: 32.8%; height: 49.2%; transform: none; animation: hero-side-zoom 18s 1s ease-in-out infinite alternate; }
+    .hero-photo img { filter: saturate(1.06) contrast(1.02); }
+    .hero-photo figcaption { left: 14px; bottom: 14px; padding: 8px 10px; border-radius: 0; background: var(--acid); color: var(--ink); font-size: 9px; }
+    .hero-float-tag { border: 0; border-radius: 0; background: var(--acid); color: var(--ink); box-shadow: none; }
+    .hero-float-tag-top { top: 16px; left: 16px; right: auto; animation: none; }
+    .hero-float-card { left: 16px; right: auto; top: auto; bottom: 16px; border: 0; border-radius: 0; background: var(--paper); box-shadow: none; animation: none; }
+    .float-card-icon { border-radius: 0; background: var(--blue); color: white; }
+    .float-card-bars i { background: var(--blue); }
+    .hero-orbit { display: none; }
+    .trust-strip { padding: 17px 0; border: 0; background: var(--blue); }
+    .trust-items { justify-content: space-between; gap: 20px; color: white; font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .trust-items svg { color: var(--acid); }
+    .capability-marquee { padding: 20px 0; border-bottom: 2px solid var(--ink); background: var(--acid); }
+    .capability-track span { gap: 22px; padding: 0 23px; color: var(--ink); font-size: 11px; font-weight: 900; letter-spacing: .13em; }
+    .capability-track b { color: var(--blue); font-size: 20px; }
+    .services-section { background: var(--paper); }
+    .services-section .section-head h2 { max-width: 900px; }
+    .services-visual-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+    .service-visual-card { display: grid; grid-template-columns: 90px minmax(0, 1fr) minmax(220px, .72fr); grid-template-areas: "number copy image"; align-items: center; gap: 34px; min-height: 0; padding: 20px 0; overflow: visible; border: 0; border-top: 1px solid var(--ink); border-radius: 0; background: transparent; box-shadow: none; transition: background .25s ease; }
+    .service-visual-card:last-child { border-bottom: 1px solid var(--ink); }
+    .service-visual-card:hover { transform: none; background: #e7e4db; box-shadow: none; }
+    .service-number { grid-area: number; position: static; align-self: start; justify-self: start; padding: 8px 9px; border: 0; border-radius: 0; background: var(--acid); color: var(--ink); font-size: 10px; font-weight: 900; letter-spacing: .06em; }
+    .service-visual-copy { grid-area: copy; position: relative; left: auto; right: auto; bottom: auto; padding: 10px 44px 10px 0; color: var(--ink); }
+    .service-mini-label { display: block; margin-bottom: 10px; color: var(--blue); font-size: 9px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    .service-visual-copy h3 { margin: 0 0 12px; color: var(--ink); font-size: clamp(29px, 3.8vw, 48px); line-height: .92; letter-spacing: -.075em; text-transform: uppercase; }
+    .service-visual-copy p { max-width: 440px; margin: 0; color: #4f4e49; font-size: 13px; line-height: 1.68; }
+    .service-arrow { position: absolute; top: 50%; right: 0; display: grid; place-items: center; width: 38px; height: 38px; margin: 0; border: 1px solid var(--ink); border-radius: 50%; background: transparent; color: var(--ink); transform: translateY(-50%); transition: transform .25s ease, background .25s ease; }
+    .service-arrow svg { width: 16px; height: 16px; }
+    .service-visual-card:hover .service-arrow { transform: translate(4px, -50%); background: var(--acid); }
+    .service-visual-image { grid-area: image; position: relative; inset: auto; z-index: auto; width: 100%; height: 170px; overflow: hidden; clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%); }
+    .service-visual-image::after { background: linear-gradient(0deg, rgba(0,0,0,.04), rgba(0,0,0,0)); }
+    .service-visual-image img { filter: grayscale(.18); transition: transform .7s var(--ease), filter .7s ease; }
+    .service-visual-card:hover .service-visual-image img { transform: scale(1.08); filter: grayscale(0); }
+    .portfolio { overflow: hidden; background: var(--blue); color: white; }
+    .portfolio .section-head h2 { max-width: 900px; color: white; }
+    .portfolio .section-head p { color: rgba(255,255,255,.76); }
+    .portfolio .eyebrow { color: var(--acid); }
+    .portfolio .eyebrow::before { background: var(--acid); }
+    .portfolio .accent { color: var(--acid); }
+    .portfolio .accent::after { display: none; }
+    .visual-rail { width: 100%; padding: 8px 0 12px; overflow: hidden; }
+    .visual-rail-track { gap: 10px; }
+    .visual-tile { flex-basis: 320px; height: 420px; margin: 0; border: 0; border-radius: 0; background: #222; box-shadow: none; }
+    .visual-tile.tile-tall { height: 460px; }
+    .visual-tile.tile-wide { flex-basis: 420px; }
+    .visual-tile::after { background: linear-gradient(180deg, transparent 25%, rgba(0,0,0,.8)); }
+    .visual-tile figcaption { left: 22px; right: 18px; bottom: 22px; }
+    .visual-tile figcaption span { color: var(--acid); }
+    .visual-tile figcaption strong { font-size: 25px; line-height: 1.04; text-transform: uppercase; }
+    .process-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; }
+    .process-step { padding: 24px 20px 10px 0; border-top: 2px solid var(--ink); }
+    .process-step::before { color: var(--blue); font-size: 42px; letter-spacing: -.08em; }
+    .process-step h3 { margin: 28px 0 10px; font-size: 19px; letter-spacing: -.04em; text-transform: uppercase; }
+    .process-step p { color: #5c5b55; font-size: 13px; line-height: 1.72; }
+    .pricing { background: var(--acid); }
+    .pricing .eyebrow { color: var(--ink); }
+    .pricing .eyebrow::before { background: var(--blue); }
+    .pricing .accent { color: var(--blue); }
+    .pricing .accent::after { background: var(--paper); }
+    .pricing-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--ink); }
+    .price-card { padding: 30px; border: 0; border-right: 1px solid var(--ink); border-radius: 0; background: var(--paper); }
+    .price-card:last-child { border-right: 0; }
+    .price-card.featured { border-color: var(--ink); background: var(--ink); color: white; box-shadow: none; }
+    .price-card.featured .price-summary, .price-card.featured .price-value small, .price-card.featured .price-features { color: rgba(255,255,255,.76); }
+    .price-card.featured .price-divider { background: rgba(255,255,255,.24); }
+    .price-card.featured .price-features svg { color: var(--acid); }
+    .price-top { align-items: start; }
+    .price-name { font-size: 14px; font-weight: 900; text-transform: uppercase; }
+    .price-badge { padding: 7px 8px; border-radius: 0; background: var(--acid); color: var(--ink); font-size: 9px; }
+    .price-value { margin: 23px 0 9px; font-size: clamp(30px, 3.2vw, 42px); }
+    .price-summary { min-height: 58px; font-size: 13px; }
+    .price-divider { background: var(--line); }
+    .price-features { color: #33332d; font-size: 12px; line-height: 1.55; }
+    .price-features svg { color: var(--blue); }
+    .price-card .button { width: 100%; margin-top: auto; border-radius: 0; }
+    .price-card.featured .button-dark { border-color: var(--acid); background: var(--acid); color: var(--ink); }
+    .pricing-note { color: #34342f; font-size: 12px; line-height: 1.7; }
+    #sss { background: var(--paper-deep); }
+    .faq-grid { gap: 80px; }
+    .faq-intro h2 { font-size: clamp(36px, 5vw, 68px); line-height: .92; letter-spacing: -.08em; text-transform: uppercase; }
+    .faq-intro .eyebrow { color: var(--blue); }
+    .faq-list { border-top: 2px solid var(--ink); }
+    details { border-bottom: 1px solid var(--ink); }
+    summary { padding: 22px 0; font-size: 15px; font-weight: 800; }
+    summary::after { width: 28px; height: 28px; border: 1px solid var(--ink); border-radius: 0; color: var(--ink); background: transparent; }
+    details[open] summary::after { background: var(--acid); border-color: var(--ink); }
+    details p { color: #4e4d47; font-size: 13px; line-height: 1.75; }
+    .contact-section { padding: 92px 0; background: var(--ink); color: white; }
+    .contact-panel { grid-template-columns: .85fr 1.15fr; gap: 72px; padding: 0; border: 0; border-radius: 0; background: transparent; }
+    .contact-copy .eyebrow { color: var(--acid); }
+    .contact-copy .eyebrow::before { background: var(--acid); }
+    .contact-copy h2 { font-size: clamp(44px, 6vw, 78px); line-height: .9; letter-spacing: -.085em; text-transform: uppercase; }
+    .contact-copy p { color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.75; }
+    .contact-points { color: white; }
+    .contact-points svg { color: var(--acid); }
+    .field label { color: rgba(255,255,255,.85); font-size: 10px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .field input, .field select, .field textarea { border: 1px solid #494949; border-radius: 0; background: #1e1e1e; color: white; padding: 15px; font-size: 13px; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--acid); box-shadow: 0 0 0 2px rgba(216,255,56,.15); }
+    .field input::placeholder, .field textarea::placeholder { color: #9b9b95; }
+    .form-status { color: var(--acid); }
+    .form-note { color: #a4a49c; }
+    .contact-form .button-dark { border-color: var(--acid); background: var(--acid); color: var(--ink); }
+    .site-footer { padding: 26px 0 30px; border-top: 1px solid #414141; background: var(--ink); color: white; }
+    .footer-copy, .footer-links { color: rgba(255,255,255,.66); }
+    .footer-links a:hover { color: var(--acid); }
+    .footer-brand .brand-sub { color: rgba(255,255,255,.55); }
+    .footer-brand .brand-mark { color: white; }
+    .footer-brand .brand-mark path:nth-child(2) { fill: var(--acid); }
+    @keyframes hero-main-zoom { from { transform: scale(1); } to { transform: scale(1.07); } }
+    @keyframes hero-side-zoom { from { transform: scale(1); } to { transform: scale(1.12); } }
+    @media (max-width: 980px) {
+      .hero-copy { grid-template-columns: minmax(0, 1fr) 290px; gap: 0 24px; }
+      .hero-copy h1 { font-size: clamp(58px, 10vw, 112px); }
+      .hero-art { aspect-ratio: 1.8 / 1; }
+      .service-visual-card { grid-template-columns: 65px minmax(0, 1fr) minmax(190px, .7fr); gap: 20px; }
+      .service-visual-image { height: 150px; }
+      .contact-panel { gap: 38px; }
+      .faq-grid { gap: 45px; }
+    }
+    @media (max-width: 720px) {
+      .container, .hero-grid { width: calc(100% - 34px); }
+      .section { padding: 76px 0; }
+      .section-head { display: block; margin-bottom: 34px; }
+      .section-head h2 { font-size: clamp(38px, 10vw, 56px); line-height: .92; }
+      .section-head p { margin-top: 18px; font-size: 13px; }
+      .nav { min-height: 68px; }
+      .nav-links { top: 68px; background: var(--paper); border-bottom: 2px solid var(--ink); box-shadow: none; padding: 10px 20px 20px; }
+      .nav-links a { padding: 15px 0; border-bottom: 1px solid var(--line); }
+      .nav-actions > .button { display: none; }
+      .menu-toggle { display: grid; place-items: center; border-radius: 0; background: var(--acid); border: 1px solid var(--ink); }
+      .hero { padding: 38px 0 0; }
+      .hero-copy { display: block; padding: 10px 0 32px; }
+      .hero-copy h1 { font-size: clamp(48px, 12vw, 72px); line-height: .84; margin: 25px 0 24px; }
+      .hero-copy > p { max-width: 520px; font-size: 14px; }
+      .hero-actions { margin-top: 22px; }
+      .hero-notes { margin-top: 28px; gap: 12px 18px; }
+      .hero-art { aspect-ratio: .95 / 1; min-height: 0; }
+      .hero-photo-main { inset: 0 0 34% 0; }
+      .hero-photo-social { top: auto; bottom: 0; left: 0; right: auto; width: 49.5%; height: 33%; }
+      .hero-photo-web { bottom: 0; right: 0; width: 49.5%; height: 33%; }
+      .hero-float-tag-top { top: 10px; left: 10px; font-size: 8px; }
+      .hero-float-card { left: 10px; bottom: calc(33% + 10px); min-width: 150px; padding: 9px; }
+      .hero-float-card small { font-size: 8px; }
+      .trust-items { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+      .trust-items span { font-size: 9px; line-height: 1.35; }
+      .capability-track span { font-size: 9px; padding-inline: 16px; }
+      .service-visual-card { grid-template-columns: 48px minmax(0, 1fr); grid-template-areas: "number copy" "image image"; gap: 10px 14px; padding: 18px 0; }
+      .service-number { font-size: 9px; padding: 7px; }
+      .service-visual-copy { padding: 0 44px 8px 0; }
+      .service-visual-copy h3 { font-size: clamp(28px, 7vw, 38px); margin-bottom: 8px; }
+      .service-visual-copy p { font-size: 12px; }
+      .service-arrow { width: 32px; height: 32px; }
+      .service-visual-image { height: 190px; clip-path: none; }
+      .visual-tile { flex-basis: 245px; height: 325px; }
+      .visual-tile.tile-tall { height: 355px; }
+      .visual-tile.tile-wide { flex-basis: 285px; }
+      .process-grid { grid-template-columns: 1fr 1fr; gap: 22px 16px; }
+      .process-step::before { font-size: 34px; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .price-card { border-right: 0; border-bottom: 1px solid var(--ink); padding: 24px; }
+      .price-card:last-child { border-bottom: 0; }
+      .price-summary { min-height: 0; }
+      .faq-grid { grid-template-columns: 1fr; gap: 24px; }
+      .faq-intro h2 { font-size: clamp(38px, 10vw, 54px); }
+      .contact-section { padding: 70px 0; }
+      .contact-panel { grid-template-columns: 1fr; gap: 32px; }
+      .contact-copy h2 { font-size: clamp(42px, 11vw, 60px); }
+      .contact-form { grid-template-columns: 1fr; }
+      .field.full, .form-foot, .form-note { grid-column: 1; }
+      .footer-row { flex-wrap: wrap; align-items: flex-start; }
+      .footer-links { width: 100%; flex-wrap: wrap; gap: 12px 18px; }
+    }
+    @media (max-width: 390px) {
+      .hero-copy h1 { font-size: 47px; }
+      .hero-float-card { min-width: 130px; }
+      .trust-items { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .service-visual-image { height: 165px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-photo-main, .hero-photo-social, .hero-photo-web, .capability-track, .visual-rail-track { animation: none !important; }
+      .hero-photo img, .service-visual-image img { transition: none !important; }
+      .visual-rail { overflow-x: auto; }
+      .visual-rail-track { transform: none !important; }
+    }
+
   </style>
 </head>
 <body>
   <header class="site-header">
     <nav class="nav container" aria-label="Ana navigasyon">
       <a class="brand" href="#anasayfa" aria-label="FMT Visual ana sayfa">
-        <svg class="brand-mark" viewBox="0 0 80 80" aria-hidden="true"><path fill="currentColor" d="M13 8H71L60 20H28V31H48L36 43H28V64L13 78V8Z"/><path fill="#8EDCFF" d="M35 35H57L35 57V35Z"/></svg>
+        <svg class="brand-mark" viewBox="0 0 80 80" aria-hidden="true"><path fill="currentColor" d="M13 8H71L60 20H28V31H48L36 43H28V64L13 78V8Z"/><path fill="#D8FF38" d="M35 35H57L35 57V35Z"/></svg>
         <span class="brand-copy"><span class="brand-name">FMT.</span><span class="brand-sub">VISUAL STUDIO</span></span>
       </a>
       <div class="nav-links" id="navLinks">
@@ -481,7 +730,7 @@
         <a href="#paketler">Web paketleri</a>
       </div>
       <div class="nav-actions">
-        <a class="button button-dark" href="#iletisim">Proje konuşalım <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        <a class="button button-dark" href="#iletisim">İş başlatalım <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navLinks"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       </div>
     </nav>
@@ -491,17 +740,17 @@
     <section class="hero" id="anasayfa">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="hero-tag"><span class="status-dot"></span> Sosyal · 3D · Web · Meta Ads</div>
-          <h1>Markanı dijitalde <span class="accent">öne çıkar.</span></h1>
-          <p>Sosyal medya tasarımları, etkileyici 3D görseller, modern web siteleri ve Meta reklam kreatifleri. Markanın dijitalde tutarlı, akılda kalıcı ve profesyonel görünmesi için tasarlıyorum.</p>
+          <div class="hero-tag"><span class="status-dot"></span> Bağımsız yaratıcı stüdyo / Sosyal · 3D · Web · Meta Ads</div>
+          <h1>Sıradan değil. <span class="accent">Görünür ol.</span></h1>
+          <p>Sosyal medya, 3D, web ve Meta reklamları için markanın fark edilmesini sağlayan görsel sistemler üretiyorum. Daha az şablon, daha çok karakter.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#iletisim">Projeyi konuşalım <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-            <a class="button button-quiet" href="#hizmetler">Hizmetleri keşfet</a>
+            <a class="button button-primary" href="#iletisim">Bir proje başlat <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a class="button button-quiet" href="#projeler">İşleri keşfet</a>
           </div>
           <div class="hero-notes">
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Marka odaklı</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Görsel odaklı</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Tek noktadan üretim</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Fikirden yayına</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Görsel bütünlük</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Özgün üretim</span>
           </div>
         </div>
         <div class="hero-art hero-collage" aria-label="Sosyal medya, 3D tasarım, web ve reklam alanlarını gösteren görsel kolaj">
@@ -547,7 +796,7 @@
     <section class="section services-section" id="hizmetler">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">Hizmetler</span><h2>Markan için gereken <span class="accent">dört yaratıcı güç.</span></h2></div>
+          <div><span class="eyebrow">Hizmetler</span><h2>Dört disiplin. <span class="accent">Tek yaratıcı yön.</span></h2></div>
           <p>Farklı ihtiyaçları tek bir görsel bakışla birleştiriyorum. Her hizmet, markanın anlatmak istediği şeyi daha net ve etkili göstermeye odaklanır.</p>
         </div>
         <div class="services-grid services-visual-grid">
@@ -578,7 +827,7 @@
     <section class="section portfolio" id="projeler">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">Görsel dünyamız</span><h2>Scroll et, keşfet. <span class="accent">Farklı işler, tek bakış.</span></h2></div>
+          <div><span class="eyebrow">Görsel dünyamız</span><h2>Görsel dünyaya dal. <span class="accent">Farklı disiplinler, tek bakış.</span></h2></div>
           <p>Sosyal içerikten 3D görselleştirmeye, web arayüzlerinden reklam kreatiflerine kadar farklı görsel dilleri bir araya getiren referans galerisi.</p>
         </div>
       </div>
@@ -608,7 +857,7 @@
     <section class="section" id="surec">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">Çalışma süreci</span><h2>Net bir plan. <span class="accent">Sürprizsiz</span> bir süreç.</h2></div>
+          <div><span class="eyebrow">Çalışma süreci</span><h2>Fikirden son piksele. <span class="accent">Net bir üretim süreci.</span></h2></div>
           <p>İster sosyal medya, ister 3D, web ya da reklam projesi olsun; yaratıcı fikri hedefe ve doğru üretim planına bağlıyorum.</p>
         </div>
         <div class="process-grid">
@@ -623,7 +872,7 @@
     <section class="section pricing" id="paketler">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">Web sitesi paketleri</span><h2>İhtiyacına uygun <span class="accent">başlangıç noktası.</span></h2></div>
+          <div><span class="eyebrow">Web sitesi paketleri</span><h2>Web projeleri için <span class="accent">net bir başlangıç.</span></h2></div>
           <p>Her proje farklıdır. Aşağıdaki paketler kapsamı hızlıca anlamak için hazırlanmış başlangıç seçenekleridir.</p>
         </div>
         <div class="pricing-grid">
@@ -673,7 +922,7 @@
 
     <section class="section" id="sss">
       <div class="container faq-grid">
-        <div class="faq-intro reveal"><span class="eyebrow">Merak edilenler</span><h2>Hangi aşamada olursan ol, birlikte netleştirebiliriz.</h2><p>İhtiyacın tek bir tasarım ya da birden fazla hizmet olabilir. Önce hedefi belirleyip uygun kapsamı çıkarıyoruz.</p></div>
+        <div class="faq-intro reveal"><span class="eyebrow">Merak edilenler</span><h2>Önce doğru soruyu bulalım.</h2><p>İhtiyacın tek bir tasarım ya da birden fazla hizmet olabilir. Önce hedefi belirleyip uygun kapsamı çıkarıyoruz.</p></div>
         <div class="faq-list reveal">
           <details><summary>Sosyal medya için hangi tasarımları hazırlıyorsun?</summary><p>Gönderi ve hikâye tasarımları, içerik serileri, kampanya görselleri ve markanın görsel dilini tutarlı hale getiren tasarım setleri hazırlanabilir.</p></details>
           <details><summary>3D modelleme ve animasyon hizmeti neleri kapsıyor?</summary><p>Projenin ihtiyacına göre ürün modelleme, materyal ve ışık çalışmaları, render, parçalı ürün sunumu veya kısa animasyon kapsamı belirlenir.</p></details>
@@ -689,7 +938,7 @@
         <div class="contact-panel reveal">
           <div class="contact-copy">
             <span class="eyebrow">Birlikte üretelim</span>
-            <h2>Markan için doğru görsel dili birlikte kuralım.</h2>
+            <h2>Bir sonraki güçlü işin burada başlasın.</h2>
             <p>Sosyal medya, 3D, web veya Meta reklam kurgusu… Hedefini anlat, ihtiyacına uygun yaratıcı planı birlikte oluşturalım.</p>
             <div class="contact-points">
               <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/></svg> İhtiyaca göre çözüm</span>
@@ -714,7 +963,7 @@
   <footer class="site-footer">
     <div class="container footer-row">
       <a class="footer-brand" href="#anasayfa" aria-label="Başa dön">
-        <svg class="brand-mark" viewBox="0 0 80 80" aria-hidden="true"><path fill="currentColor" d="M13 8H71L60 20H28V31H48L36 43H28V64L13 78V8Z"/><path fill="#8EDCFF" d="M35 35H57L35 57V35Z"/></svg>
+        <svg class="brand-mark" viewBox="0 0 80 80" aria-hidden="true"><path fill="currentColor" d="M13 8H71L60 20H28V31H48L36 43H28V64L13 78V8Z"/><path fill="#D8FF38" d="M35 35H57L35 57V35Z"/></svg>
         <span class="brand-copy"><span class="brand-name">FMT.</span><span class="brand-sub">VISUAL STUDIO</span></span>
       </a>
       <span class="footer-copy">© <span id="year"></span> FMT Visual. Tüm hakları saklıdır.</span>
