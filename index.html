@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f9fa">
+  <meta name="description" content="FMT Visual; markalar için modern web tasarım, kullanıcı deneyimi ve 3D görselleştirme çözümleri üretir.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FMT Visual — Dijitalde güçlü bir ilk izlenim">
+  <meta property="og:description" content="Modern web tasarım ve etkileyici 3D görselleştirmeler.">
+  <meta property="og:site_name" content="FMT Visual">
+  <title>FMT Visual — Web Tasarım &amp; 3D Görselleştirme</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f9fa;
+      --white: #ffffff;
+      --ink: #19232d;
+      --ink-soft: #273541;
+      --muted: #64717d;
+      --line: #e1e8ec;
+      --ice: #8edcff;
+      --ice-strong: #4ab9e8;
+      --ice-pale: #e8f8ff;
+      --dark: #202a34;
+      --radius: 22px;
+      --shadow: 0 18px 55px rgba(28, 48, 61, .08);
+      --ease: cubic-bezier(.2,.75,.25,1);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #53616c; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 20px; height: 2px; border-radius: 4px; background: var(--ice-strong); }
+    .section { padding: 104px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 36px; margin-bottom: 38px; }
+    .section-head h2 { max-width: 650px; margin: 14px 0 0; font-size: clamp(32px, 4.4vw, 52px); line-height: 1.06; letter-spacing: -.055em; font-weight: 650; }
+    .section-head p { max-width: 360px; margin: 0 0 4px; color: var(--muted); line-height: 1.7; font-size: 15px; }
+    .accent { position: relative; z-index: 0; white-space: nowrap; }
+    .accent::after { content: ""; position: absolute; z-index: -1; height: .22em; bottom: .06em; left: -.02em; right: -.02em; border-radius: 99px; background: var(--ice); opacity: .9; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 19px; border: 1px solid transparent; border-radius: 999px; cursor: pointer; font-size: 13px; font-weight: 700; transition: transform .22s var(--ease), background .22s var(--ease), border-color .22s var(--ease), box-shadow .22s var(--ease); }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: #10202a; background: var(--ice); box-shadow: 0 8px 22px rgba(84, 190, 231, .16); }
+    .button-primary:hover { background: #a4e5ff; box-shadow: 0 12px 28px rgba(84, 190, 231, .22); }
+    .button-dark { background: var(--ink); color: white; }
+    .button-dark:hover { background: #2b3b48; }
+    .button-quiet { background: rgba(255,255,255,.76); border-color: var(--line); color: var(--ink); }
+    .button-quiet:hover { border-color: #b9dce9; background: white; }
+    .button svg { width: 15px; height: 15px; }
+    .site-header { position: sticky; z-index: 50; top: 0; background: rgba(247,249,250,.84); border-bottom: 1px solid rgba(225,232,236,.75); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; min-width: 160px; }
+    .brand-mark { display: block; width: 34px; height: 34px; color: var(--ink); flex: none; }
+    .brand-copy { display: flex; flex-direction: column; gap: 1px; line-height: 1; }
+    .brand-name { font-size: 17px; font-weight: 800; letter-spacing: -.055em; }
+    .brand-sub { margin-top: 4px; color: #74818b; font-size: 8px; letter-spacing: .23em; font-weight: 700; }
+    .nav-links { display: flex; align-items: center; gap: 29px; color: #53616c; font-size: 12px; font-weight: 650; }
+    .nav-links a { transition: color .18s ease; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid var(--line); background: white; border-radius: 50%; color: var(--ink); cursor: pointer; }
+    .hero { padding: 60px 0 52px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: clamp(28px, 5vw, 68px); min-height: 510px; }
+    .hero-copy { padding: 18px 0 28px; position: relative; z-index: 2; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 9px; border: 1px solid #dbe9ef; background: rgba(255,255,255,.72); border-radius: 99px; padding: 8px 12px; color: #52616c; font-size: 11px; font-weight: 650; }
+    .status-dot { width: 7px; height: 7px; background: #63bfa6; border-radius: 50%; box-shadow: 0 0 0 4px rgba(99,191,166,.13); }
+    h1 { max-width: 630px; margin: 25px 0 20px; font-size: clamp(48px, 6.1vw, 78px); line-height: .99; letter-spacing: -.075em; font-weight: 670; }
+    .hero-copy > p { max-width: 480px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
+    .hero-actions { display: flex; align-items: center; gap: 11px; flex-wrap: wrap; margin-top: 29px; }
+    .hero-notes { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px; color: #6e7a84; font-size: 11px; font-weight: 650; }
+    .hero-notes span { display: inline-flex; align-items: center; gap: 7px; }
+    .hero-notes svg { width: 14px; height: 14px; color: #479fc4; }
+    .hero-art { position: relative; min-width: 0; min-height: 445px; aspect-ratio: 1.03 / 1; border: 1px solid #e3edf1; border-radius: 30px; background: radial-gradient(circle at 75% 18%, rgba(142,220,255,.55), transparent 32%), linear-gradient(145deg, #eaf8fd 0%, #f9fbfc 58%, #edf2f4 100%); overflow: hidden; isolation: isolate; }
+    .art-grid { position: absolute; inset: 0; opacity: .42; background-image: linear-gradient(rgba(91,145,166,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(91,145,166,.1) 1px, transparent 1px); background-size: 34px 34px; mask-image: linear-gradient(135deg, black, transparent 85%); }
+    .art-label { position: absolute; z-index: 5; top: 20px; left: 20px; display: flex; align-items: center; gap: 8px; padding: 8px 11px; border: 1px solid rgba(255,255,255,.9); border-radius: 99px; background: rgba(255,255,255,.75); color: #52616c; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+    .art-label .status-dot { width: 6px; height: 6px; }
+    .orb { position: absolute; width: 225px; height: 225px; right: 12%; top: 16%; border-radius: 50%; background: radial-gradient(circle at 30% 25%, #fff 0%, #d5f4ff 15%, #83d8fa 40%, #4ca6d2 70%, #2e739d 100%); box-shadow: inset -22px -20px 38px rgba(29,80,112,.22), inset 8px 10px 20px rgba(255,255,255,.72), 0 30px 60px rgba(45,137,178,.2); transform: rotate(-18deg); }
+    .orb::after { content: ""; position: absolute; inset: 17% 10% 48% 12%; border-top: 1px solid rgba(255,255,255,.72); border-radius: 50%; transform: rotate(-22deg); }
+    .orb-ring { position: absolute; z-index: 1; width: 310px; height: 94px; top: 35%; right: 1%; border: 1px solid rgba(69,161,197,.55); border-radius: 50%; transform: rotate(-31deg); }
+    .orb-ring::after { content: ""; position: absolute; width: 7px; height: 7px; top: 8px; left: 45px; border-radius: 50%; background: white; box-shadow: 0 0 0 5px rgba(255,255,255,.38); }
+    .render-window { position: absolute; z-index: 3; left: 7%; bottom: 7%; width: 67%; border-radius: 15px; background: rgba(255,255,255,.94); border: 1px solid rgba(255,255,255,.95); box-shadow: 0 20px 50px rgba(31,66,83,.14); overflow: hidden; transform: rotate(-3deg); }
+    .window-bar { display: flex; align-items: center; gap: 5px; padding: 10px 12px; border-bottom: 1px solid #edf1f3; }
+    .window-bar i { width: 5px; height: 5px; border-radius: 50%; background: #d5dfe4; }
+    .window-bar span { margin-left: auto; color: #96a4ad; font-size: 8px; letter-spacing: .06em; }
+    .window-body { padding: 16px; display: grid; grid-template-columns: 1fr 1.1fr; gap: 14px; align-items: center; }
+    .window-kicker { color: #7c8c96; font-size: 7px; letter-spacing: .16em; font-weight: 800; }
+    .window-title { margin-top: 8px; font-size: clamp(15px, 2vw, 22px); line-height: 1.04; font-weight: 750; letter-spacing: -.055em; }
+    .window-line { width: 78%; height: 4px; margin-top: 8px; border-radius: 4px; background: #e8eef1; }
+    .window-line.short { width: 53%; margin-top: 5px; }
+    .window-visual { height: 100px; border-radius: 9px; background: radial-gradient(circle at 55% 38%, #a8e9ff, #6ac6ec 45%, #3186b3 100%); position: relative; overflow: hidden; }
+    .window-visual::before { content: ""; position: absolute; width: 63px; height: 63px; left: calc(50% - 31px); top: 16px; border-radius: 50%; background: radial-gradient(circle at 30% 24%, white, #c9f2ff 22%, #69c5e9 65%, #398bb6); box-shadow: 8px 9px 20px rgba(16,76,108,.25); }
+    .window-visual::after { content: ""; position: absolute; width: 90px; height: 26px; left: calc(50% - 45px); top: 37px; border: 1px solid rgba(255,255,255,.6); border-radius: 50%; transform: rotate(-25deg); }
+    .floating-note { position: absolute; z-index: 4; right: 5%; bottom: 14%; display: flex; align-items: center; gap: 9px; padding: 12px 14px; border: 1px solid rgba(255,255,255,.85); border-radius: 13px; background: rgba(255,255,255,.86); box-shadow: 0 12px 30px rgba(31,66,83,.1); color: #34434e; font-size: 10px; font-weight: 750; }
+    .floating-note .note-icon { display: grid; place-items: center; width: 27px; height: 27px; background: var(--ice-pale); color: #368bb3; border-radius: 8px; }
+    .floating-note svg { width: 15px; height: 15px; }
+    .trust-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 18px 0; }
+    .trust-items { display: flex; align-items: center; justify-content: space-between; gap: 18px; color: #64717d; font-size: 11px; font-weight: 700; }
+    .trust-items span { display: inline-flex; align-items: center; gap: 8px; }
+    .trust-items svg { width: 16px; height: 16px; color: #4da9cf; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+    .service-card { min-height: 285px; padding: 27px; border: 1px solid var(--line); border-radius: var(--radius); background: white; transition: transform .25s var(--ease), border-color .25s ease, box-shadow .25s ease; }
+    .service-card:hover { transform: translateY(-5px); border-color: #c6e8f4; box-shadow: var(--shadow); }
+    .service-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: var(--ice-pale); color: #286f90; }
+    .service-icon svg { width: 22px; height: 22px; }
+    .service-card h3 { margin: 24px 0 10px; font-size: 20px; letter-spacing: -.045em; }
+    .service-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+    .service-card ul { display: flex; flex-wrap: wrap; gap: 7px; padding: 0; margin: 20px 0 0; list-style: none; }
+    .service-card li { padding: 7px 9px; border-radius: 99px; background: #f4f7f8; color: #5e6c77; font-size: 10px; font-weight: 650; }
+    .portfolio { background: #eef3f5; }
+    .portfolio-grid { display: grid; grid-template-columns: 1.08fr .92fr .92fr; gap: 17px; }
+    .project-card { min-width: 0; }
+    .project-art { position: relative; overflow: hidden; aspect-ratio: 1 / .91; border-radius: 20px; border: 1px solid rgba(22,45,58,.07); transition: transform .3s var(--ease), box-shadow .3s ease; }
+    .project-card:hover .project-art { transform: translateY(-4px); box-shadow: 0 18px 35px rgba(24,47,60,.1); }
+    .project-art.product { background: radial-gradient(circle at 55% 35%, #e1f8ff 0, #b8e8f8 27%, #79c7e8 53%, #478bb1 100%); }
+    .project-art.product::before { content: ""; position: absolute; width: 42%; aspect-ratio: 1; top: 18%; left: 29%; border-radius: 28%; background: linear-gradient(135deg, #f7fcff 0%, #b3e9fb 35%, #3e91bd 100%); transform: rotate(24deg) skew(-5deg); box-shadow: 20px 26px 40px rgba(30,83,112,.28), inset -13px -13px 25px rgba(35,100,136,.15); }
+    .project-art.product::after { content: ""; position: absolute; width: 68%; height: 20%; top: 45%; left: 16%; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; transform: rotate(-28deg); }
+    .project-art.architecture { background: linear-gradient(150deg, #f8fbfc, #d9e6eb); }
+    .arch-block { position: absolute; bottom: 0; background: linear-gradient(110deg,#ffffff,#d9e3e7); box-shadow: 15px 0 25px rgba(64,91,104,.08); }
+    .arch-block.a { width: 31%; height: 56%; left: 13%; clip-path: polygon(0 18%,70% 0,100% 12%,100% 100%,0 100%); }
+    .arch-block.b { width: 35%; height: 76%; left: 42%; clip-path: polygon(0 15%,100% 0,100% 100%,0 100%); background: linear-gradient(110deg,#c8d8df,#eef4f6); }
+    .arch-block.c { width: 18%; height: 44%; right: 8%; clip-path: polygon(0 12%,100% 0,100% 100%,0 100%); background: linear-gradient(90deg,#edf4f6,#bdcfd8); }
+    .arch-window { position: absolute; z-index: 2; bottom: 14%; left: 52%; width: 10%; height: 20%; background: #8edcff; opacity: .8; }
+    .project-art.branding { background: linear-gradient(145deg,#e8e7df,#f9f7f1); padding: 22px; }
+    .brand-sheet { position: absolute; inset: 12% 13%; background: #fffefa; border: 1px solid rgba(42,55,61,.09); box-shadow: 0 18px 30px rgba(39,51,55,.08); padding: 12%; display: flex; flex-direction: column; justify-content: space-between; transform: rotate(4deg); }
+    .brand-sheet .sheet-mark { font-size: 24px; font-weight: 850; letter-spacing: -.1em; color: #202a34; }
+    .brand-sheet .sheet-mark span { color: #52bde9; }
+    .sheet-lines { display: grid; gap: 6px; }
+    .sheet-lines i { display: block; height: 4px; background: #e5e8e5; border-radius: 4px; }
+    .sheet-lines i:nth-child(1) { width: 90%; }
+    .sheet-lines i:nth-child(2) { width: 62%; }
+    .sheet-swatches { display: flex; gap: 6px; }
+    .sheet-swatches i { display: block; width: 23px; height: 23px; border-radius: 50%; background: #8edcff; }
+    .sheet-swatches i:nth-child(2) { background: #26323b; }
+    .sheet-swatches i:nth-child(3) { background: #d6e2e7; }
+    .project-meta { display: flex; justify-content: space-between; align-items: start; gap: 14px; padding: 16px 2px 0; }
+    .project-meta h3 { margin: 0; font-size: 16px; letter-spacing: -.035em; }
+    .project-meta p { margin: 6px 0 0; color: var(--muted); font-size: 11px; }
+    .project-type { flex: none; color: #65737e; border: 1px solid #d6e0e5; padding: 6px 8px; border-radius: 99px; font-size: 9px; font-weight: 750; }
+    .project-disclaimer { margin: 26px 0 0; color: #78858e; font-size: 11px; }
+    .process-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; counter-reset: steps; }
+    .process-step { position: relative; padding: 22px 18px 18px 0; border-top: 1px solid #cfdbe1; counter-increment: steps; }
+    .process-step::before { content: "0" counter(steps); display: block; color: #4ca9cf; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+    .process-step h3 { margin: 22px 0 9px; font-size: 17px; letter-spacing: -.035em; }
+    .process-step p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+    .pricing { background: #f0f6f8; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; align-items: stretch; }
+    .price-card { display: flex; flex-direction: column; padding: 27px; border: 1px solid #dfe8ec; border-radius: 22px; background: rgba(255,255,255,.86); }
+    .price-card.featured { border-color: #a9dff2; background: white; box-shadow: 0 18px 42px rgba(54,137,172,.1); }
+    .price-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .price-name { font-size: 14px; font-weight: 800; }
+    .price-badge { padding: 6px 8px; background: var(--ice-pale); border-radius: 99px; color: #347d9e; font-size: 9px; font-weight: 800; }
+    .price-value { margin: 20px 0 5px; font-size: clamp(30px,3vw,39px); font-weight: 750; letter-spacing: -.065em; }
+    .price-value small { color: #75818a; font-size: 11px; font-weight: 600; letter-spacing: 0; }
+    .price-summary { min-height: 44px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
+    .price-divider { height: 1px; background: #e8eef1; margin: 22px 0; }
+    .price-features { display: grid; gap: 13px; padding: 0; margin: 0 0 26px; list-style: none; color: #4e5d68; font-size: 12px; }
+    .price-features li { display: flex; gap: 9px; align-items: start; }
+    .price-features svg { flex: none; width: 15px; height: 15px; color: #3a9fc7; margin-top: 1px; }
+    .price-card .button { width: 100%; margin-top: auto; }
+    .pricing-note { margin: 20px 0 0; color: #77848e; font-size: 11px; line-height: 1.7; }
+    .faq-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 70px; }
+    .faq-intro h2 { margin: 14px 0 14px; font-size: clamp(32px,4vw,47px); line-height: 1.05; letter-spacing: -.06em; }
+    .faq-intro p { max-width: 300px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .faq-list { border-top: 1px solid var(--line); }
+    details { border-bottom: 1px solid var(--line); }
+    summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 21px 0; cursor: pointer; list-style: none; font-size: 14px; font-weight: 700; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; display: grid; place-items: center; width: 26px; height: 26px; border: 1px solid var(--line); border-radius: 50%; color: #53616c; font-size: 17px; font-weight: 400; flex: none; transition: transform .2s ease, background .2s ease; }
+    details[open] summary::after { content: "−"; background: var(--ice-pale); border-color: #cceefa; }
+    details p { margin: -4px 42px 22px 0; max-width: 650px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .contact-section { padding: 24px 0 92px; }
+    .contact-panel { display: grid; grid-template-columns: .92fr 1.08fr; gap: 50px; padding: clamp(28px,5vw,58px); border: 1px solid #d9e9ef; border-radius: 28px; background: radial-gradient(circle at 0% 0%, rgba(142,220,255,.28), transparent 40%), linear-gradient(130deg,#f1fbff,#fff 60%); }
+    .contact-copy h2 { margin: 16px 0 15px; font-size: clamp(34px,4.4vw,52px); line-height: 1.02; letter-spacing: -.065em; }
+    .contact-copy p { max-width: 390px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .contact-points { display: grid; gap: 12px; margin-top: 26px; color: #53616c; font-size: 11px; font-weight: 650; }
+    .contact-points span { display: flex; align-items: center; gap: 9px; }
+    .contact-points svg { width: 16px; height: 16px; color: #3d9fc6; }
+    .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-content: start; }
+    .field { display: grid; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { color: #53616c; font-size: 11px; font-weight: 750; }
+    .field input, .field select, .field textarea { width: 100%; min-width: 0; border: 1px solid #dce6eb; outline: none; border-radius: 11px; background: rgba(255,255,255,.9); color: var(--ink); padding: 13px 13px; font-size: 12px; transition: border-color .2s ease, box-shadow .2s ease; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: #7ccce9; box-shadow: 0 0 0 3px rgba(142,220,255,.22); }
+    .field textarea { min-height: 100px; resize: vertical; }
+    .field input::placeholder, .field textarea::placeholder { color: #9aa6ae; }
+    .form-foot { grid-column: 1 / -1; display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+    .form-status { color: #60717c; font-size: 11px; line-height: 1.6; }
+    .form-note { grid-column: 1 / -1; margin: 0; color: #8a969e; font-size: 10px; line-height: 1.65; }
+    .site-footer { padding: 25px 0 28px; border-top: 1px solid var(--line); }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .footer-brand { display: flex; align-items: center; gap: 10px; }
+    .footer-brand .brand-mark { width: 29px; height: 29px; }
+    .footer-copy { color: #7a8790; font-size: 10px; }
+    .footer-links { display: flex; gap: 19px; color: #64717d; font-size: 11px; font-weight: 650; }
+    .footer-links a:hover { color: var(--ink); }
+    .reveal { opacity: 1; transform: none; }
+    .js-motion .reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s var(--ease), transform .55s var(--ease); }
+    .js-motion .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .hero-copy .hero-tag { animation: appear .55s var(--ease) both; }
+    .hero-copy h1 { animation: appear .65s .05s var(--ease) both; }
+    .hero-copy > p { animation: appear .65s .1s var(--ease) both; }
+    .hero-actions { animation: appear .65s .15s var(--ease) both; }
+    .hero-art { animation: appear .7s .08s var(--ease) both; }
+    @keyframes appear { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 940px) {
+      .nav-links { gap: 17px; }
+      .hero-grid { gap: 28px; grid-template-columns: 1fr .9fr; }
+      .hero-art { min-height: 380px; }
+      .orb { width: 180px; height: 180px; }
+      .orb-ring { width: 240px; }
+      .window-body { padding: 11px; gap: 9px; }
+      .window-visual { height: 78px; }
+      .services-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .service-card:last-child { grid-column: 1 / -1; min-height: 230px; }
+      .portfolio-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .project-card:first-child { grid-column: 1 / -1; }
+      .project-card:first-child .project-art { aspect-ratio: 1.6 / 1; }
+      .faq-grid { gap: 35px; }
+      .contact-panel { gap: 28px; }
+    }
+    @media (max-width: 720px) {
+      .container { width: min(100% - 34px, 540px); }
+      .section { padding: 76px 0; }
+      .section-head { display: block; margin-bottom: 28px; }
+      .section-head p { margin-top: 15px; }
+      .nav { min-height: 68px; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 14px 22px 22px; background: rgba(247,249,250,.98); border-bottom: 1px solid var(--line); box-shadow: 0 18px 30px rgba(22,40,52,.06); }
+      .nav-links.open { display: grid; gap: 0; }
+      .nav-links a { padding: 13px 0; border-bottom: 1px solid #e8eef1; }
+      .nav-links a:last-child { border-bottom: 0; }
+      .nav-actions > .button { display: none; }
+      .menu-toggle { display: grid; place-items: center; }
+      .hero { padding: 38px 0 36px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 30px; min-height: 0; }
+      .hero-copy { padding: 8px 0 0; }
+      h1 { font-size: clamp(47px, 12.2vw, 68px); max-width: 560px; margin-top: 22px; }
+      .hero-copy > p { font-size: 14px; }
+      .hero-art { min-height: 360px; aspect-ratio: 1.05 / .88; border-radius: 23px; }
+      .orb { width: 190px; height: 190px; right: 13%; top: 12%; }
+      .orb-ring { width: 260px; top: 31%; right: -4%; }
+      .render-window { width: 73%; left: 5%; bottom: 7%; }
+      .floating-note { right: 3%; bottom: 13%; padding: 9px; font-size: 9px; }
+      .trust-items { justify-content: flex-start; flex-wrap: wrap; gap: 13px 20px; }
+      .trust-items span { font-size: 10px; }
+      .services-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .service-card, .service-card:last-child { min-height: 0; grid-column: auto; padding: 24px; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .project-card:first-child { grid-column: auto; }
+      .project-card:first-child .project-art, .project-art { aspect-ratio: 1.2 / 1; }
+      .process-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px 20px; }
+      .process-step { padding-top: 18px; }
+      .process-step h3 { margin-top: 16px; }
+      .price-card { padding: 24px; }
+      .price-summary { min-height: 0; }
+      .faq-grid { grid-template-columns: 1fr; gap: 22px; }
+      .faq-intro p { max-width: 450px; }
+      .contact-section { padding-bottom: 70px; }
+      .contact-panel { grid-template-columns: 1fr; padding: 25px 20px; gap: 25px; border-radius: 22px; }
+      .contact-form { grid-template-columns: 1fr; }
+      .field.full, .form-foot, .form-note { grid-column: auto; }
+      .form-foot { align-items: stretch; flex-direction: column; }
+      .form-foot .button { width: 100%; }
+      .footer-row { align-items: flex-start; flex-direction: column; gap: 18px; }
+      .footer-links { flex-wrap: wrap; }
+    }
+    @media (max-width: 390px) {
+      .container { width: calc(100% - 28px); }
+      .brand { min-width: 0; }
+      .hero-actions .button { width: 100%; }
+      .hero-notes { gap: 11px; }
+      .hero-art { min-height: 320px; }
+      .orb { width: 158px; height: 158px; }
+      .render-window { width: 78%; }
+      .floating-note { display: none; }
+      .project-meta { flex-direction: column; gap: 9px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .js-motion .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Ana navigasyon">
+      <a class="brand" href="#anasayfa" aria-label="FMT Visual ana sayfa">
+        <svg class="brand-mark" viewBox="0 0 80 80" aria-hidden="true"><path fill="currentColor" d="M13 8H71L60 20H28V31H48L36 43H28V64L13 78V8Z"/><path fill="#8EDCFF" d="M35 35H57L35 57V35Z"/></svg>
+        <span class="brand-copy"><span class="brand-name">FMT.</span><span class="brand-sub">VISUAL STUDIO</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#projeler">Seçili işler</a>
+        <a href="#surec">Süreç</a>
+        <a href="#paketler">Paketler</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button button-dark" href="#iletisim">Proje konuşalım <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navLinks"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="anasayfa">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-tag"><span class="status-dot"></span> Bağımsız yaratıcı stüdyo</div>
+          <h1>Dijitalde güçlü bir <span class="accent">ilk izlenim.</span></h1>
+          <p>Markalar için modern web siteleri ve etkileyici 3D görselleştirmeler tasarlıyorum. İyi görünen, hızlı çalışan ve amacına hizmet eden dijital deneyimler.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#iletisim">Projenizi anlatalım <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a class="button button-quiet" href="#projeler">Çalışmaları keşfet</a>
+          </div>
+          <div class="hero-notes">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Mobil öncelikli</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Hız odaklı</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Özgün tasarım</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Web tasarım ve 3D görselleştirme konsept illüstrasyonu">
+          <div class="art-grid"></div>
+          <div class="art-label"><span class="status-dot"></span> DESIGN IN PROGRESS</div>
+          <div class="orb"></div>
+          <div class="orb-ring"></div>
+          <div class="render-window">
+            <div class="window-bar"><i></i><i></i><i></i><span>FMT / VISUAL LAB</span></div>
+            <div class="window-body">
+              <div><div class="window-kicker">FORM MEETS FUNCTION</div><div class="window-title">Görsel olarak net.<br>Teknik olarak güçlü.</div><div class="window-line"></div><div class="window-line short"></div></div>
+              <div class="window-visual"></div>
+            </div>
+          </div>
+          <div class="floating-note"><span class="note-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="7"/></svg></span><span>Detaylarda fark yaratır.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-items">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg> Amaca uygun tasarım</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg> Her ekranda uyum</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v4m0 10v4M3 12h4m10 0h4"/><circle cx="12" cy="12" r="5"/></svg> Performans bilinci</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m4 16 5-5 3 3 7-8"/><path d="M14 6h5v5"/></svg> Sürdürülebilir yapı</span>
+      </div>
+    </div>
+
+    <section class="section" id="hizmetler">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Ne yapıyorum?</span><h2>İyi fikirleri <span class="accent">iyi deneyimlere</span> dönüştürüyorum.</h2></div>
+          <p>İhtiyacın ister yeni bir web sitesi ister ürününü anlatan güçlü bir görsel olsun; her projeye net bir amaç ve sade bir tasarım yaklaşımıyla başlıyorum.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01M13 6.5h.01M8 13h4M8 16h8"/></svg></div>
+            <h3>Web tasarım &amp; geliştirme</h3>
+            <p>Markanı doğru anlatan, mobilde kusursuz çalışan ve ziyaretçiyi aksiyona yönlendiren modern web siteleri.</p>
+            <ul><li>Kurumsal web sitesi</li><li>Landing page</li><li>Hız &amp; temel SEO</li></ul>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21"/></svg></div>
+            <h3>3D modelleme &amp; görselleştirme</h3>
+            <p>Ürünleri, mekanları ve fikirleri daha anlaşılır ve etkileyici hale getiren özenli 3D görsel çalışmalar.</p>
+            <ul><li>Ürün görselleştirme</li><li>3D sahne</li><li>Tanıtım görselleri</li></ul>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="16" r="2"/></svg></div>
+            <h3>Dijital tasarım</h3>
+            <p>Web ve görsel dilini tamamlayan; markanın her temas noktasında tutarlı görünmesini sağlayan tasarımlar.</p>
+            <ul><li>Kampanya görselleri</li><li>Sunum tasarımı</li><li>Görsel sistem</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="projeler">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Seçili konseptler</span><h2>Fikrin görünür <span class="accent">hale geldiği</span> yer.</h2></div>
+          <p>Bu alan, marka estetiğini ve üretim yaklaşımını göstermek için hazırlanmış konsept sunumlardan oluşuyor.</p>
+        </div>
+        <div class="portfolio-grid">
+          <article class="project-card reveal">
+            <div class="project-art product" aria-label="Konsept ürün görselleştirmesi"></div>
+            <div class="project-meta"><div><h3>FORM / Product Study</h3><p>Ürün görselleştirme · 3D konsept</p></div><span class="project-type">3D</span></div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art architecture" aria-label="Konsept mimari görselleştirme"><span class="arch-block a"></span><span class="arch-block b"></span><span class="arch-block c"></span><span class="arch-window"></span></div>
+            <div class="project-meta"><div><h3>VOLUME / Space</h3><p>Mimari form · Görsel konsept</p></div><span class="project-type">3D</span></div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-art branding" aria-label="Konsept marka kimliği sunumu"><div class="brand-sheet"><div class="sheet-mark">F<span>.</span>V</div><div class="sheet-lines"><i></i><i></i></div><div class="sheet-swatches"><i></i><i></i><i></i></div></div></div>
+            <div class="project-meta"><div><h3>STUDIO / Identity</h3><p>Görsel kimlik · Dijital tasarım</p></div><span class="project-type">Brand</span></div>
+          </article>
+        </div>
+        <p class="project-disclaimer">Not: Görseller konsept amaçlıdır; gerçek müşteri işi veya tamamlanmış proje olarak sunulmamaktadır. Portföy, yeni çalışmalarla güncellenecektir.</p>
+      </div>
+    </section>
+
+    <section class="section" id="surec">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Çalışma süreci</span><h2>Net bir plan. <span class="accent">Sürprizsiz</span> bir süreç.</h2></div>
+          <p>İlk görüşmeden teslim aşamasına kadar her adımın anlaşılır, ölçülü ve birlikte ilerleyen bir süreç olmasını önemsiyorum.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step reveal"><h3>Keşif</h3><p>Hedefleri, ihtiyaçları, hedef kitleyi ve projenin kapsamını netleştiriyoruz.</p></article>
+          <article class="process-step reveal"><h3>Plan &amp; tasarım</h3><p>İçerik yapısını ve görsel yönü belirleyip ilk tasarım yaklaşımını oluşturuyorum.</p></article>
+          <article class="process-step reveal"><h3>Üretim</h3><p>Tasarımı geliştiriyor, farklı ekranlarda kontrol ediyor ve gerekli iyileştirmeleri yapıyorum.</p></article>
+          <article class="process-step reveal"><h3>Kontrol &amp; teslim</h3><p>Son kontrolleri birlikte tamamlayıp kararlaştırılan kapsamda teslim ediyorum.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="paketler">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Web sitesi paketleri</span><h2>İhtiyacına uygun <span class="accent">başlangıç noktası.</span></h2></div>
+          <p>Her proje farklıdır. Aşağıdaki paketler kapsamı hızlıca anlamak için hazırlanmış başlangıç seçenekleridir.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <div class="price-top"><span class="price-name">Başlangıç</span></div>
+            <div class="price-value">8.000 TL <small>/ başlangıç</small></div>
+            <p class="price-summary">Dijitalde net ve profesyonel bir ilk adım için.</p>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> Tek sayfa web sitesi</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> Mobil uyumlu tasarım</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> İletişim alanı</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> Temel SEO ayarları</li>
+            </ul>
+            <a class="button button-quiet" href="#iletisim">Paketi konuşalım</a>
+          </article>
+          <article class="price-card featured reveal">
+            <div class="price-top"><span class="price-name">Profesyonel</span><span class="price-badge">Dengeli tercih</span></div>
+            <div class="price-value">15.000 TL <small>/ başlangıç</small></div>
+            <p class="price-summary">Daha kapsamlı anlatım ve güçlü bir marka deneyimi için.</p>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> 5 sayfaya kadar yapı</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> Özel görsel tasarım</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> Performans iyileştirmeleri</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> İletişim / WhatsApp bağlantısı</li>
+            </ul>
+            <a class="button button-primary" href="#iletisim">Paketi konuşalım</a>
+          </article>
+          <article class="price-card reveal">
+            <div class="price-top"><span class="price-name">Premium</span></div>
+            <div class="price-value">25.000 TL <small>/ başlangıç</small></div>
+            <p class="price-summary">Özel ihtiyaçları olan markalar için daha geniş bir yapı.</p>
+            <div class="price-divider"></div>
+            <ul class="price-features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> 10 sayfaya kadar yapı</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> Özgün arayüz ve bileşenler</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> Gelişmiş içerik alanları</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg> Yayına alma desteği</li>
+            </ul>
+            <a class="button button-quiet" href="#iletisim">Paketi konuşalım</a>
+          </article>
+        </div>
+        <p class="pricing-note">Fiyatlar web sitesi projeleri için başlangıç referansıdır. İçerik üretimi, özel entegrasyonlar, alan adı, barındırma ve kapsam dışı talepler ayrıca değerlendirilir. 3D modelleme projeleri için kapsam ve fiyat teklif üzerinden belirlenir.</p>
+      </div>
+    </section>
+
+    <section class="section" id="sss">
+      <div class="container faq-grid">
+        <div class="faq-intro reveal"><span class="eyebrow">Merak edilenler</span><h2>Başlamadan önce bilmen gerekenler.</h2><p>Projenin kapsamını, zaman planını ve teslim detaylarını ilk görüşmede birlikte netleştiriyoruz.</p></div>
+        <div class="faq-list reveal">
+          <details><summary>Web sitesi ne kadar sürede tamamlanır?</summary><p>Süre, sayfa sayısına ve içeriklerin hazır olmasına göre değişir. Kapsam netleştiğinde proje takvimini teklif aşamasında belirliyoruz.</p></details>
+          <details><summary>Site mobil cihazlarda düzgün çalışacak mı?</summary><p>Evet. Tasarım mobil, tablet ve masaüstü ekranlara uyumlu hazırlanır; temel performans ve kullanılabilirlik kontrolleri teslim öncesinde yapılır.</p></details>
+          <details><summary>Alan adı ve hosting fiyata dahil mi?</summary><p>Alan adı ve barındırma ihtiyaçları projeye göre ayrıca değerlendirilir. Mevcut alan adın varsa bağlantı ve yayına alma sürecinde yardımcı olabilirim.</p></details>
+          <details><summary>3D modelleme için nasıl fiyat alabilirim?</summary><p>Modelin türü, detay seviyesi, sahne sayısı ve istenen çıktı sayısı üzerinden kapsam belirlenir. İhtiyacını ilettiğinde projeye özel teklif hazırlanır.</p></details>
+          <details><summary>Projeye nasıl başlayabiliriz?</summary><p>İhtiyacını ve hedefini kısaca anlatman yeterli. Kapsamı netleştirip uygun yaklaşım ve tahmini takvim üzerinden ilerleyebiliriz.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="iletisim">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-copy">
+            <span class="eyebrow">Birlikte üretelim</span>
+            <h2>Bir sonraki iyi fikrin burada başlayabilir.</h2>
+            <p>Projenin neye ihtiyacı olduğunu anlat. İhtiyacı, kapsamı ve en doğru yaklaşımı birlikte netleştirelim.</p>
+            <div class="contact-points">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/></svg> İhtiyaca göre çözüm</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Şeffaf kapsam ve teklif</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v14H4z"/><path d="m4 7 8 6 8-6"/></svg> Net iletişim</span>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="field"><label for="name">Adın</label><input id="name" name="name" autocomplete="name" placeholder="Adın soyadın" required></div>
+            <div class="field"><label for="email">E-posta</label><input id="email" name="email" type="email" autocomplete="email" placeholder="ornek@mail.com" required></div>
+            <div class="field"><label for="service">İlgilendiğin hizmet</label><select id="service" name="service" required><option value="">Seçim yap</option><option>Web tasarım</option><option>3D modelleme</option><option>Dijital tasarım</option><option>Birden fazla hizmet</option></select></div>
+            <div class="field"><label for="budget">Tahmini bütçe</label><select id="budget" name="budget"><option value="">Henüz emin değilim</option><option>8.000 TL civarı</option><option>15.000 TL civarı</option><option>25.000 TL ve üzeri</option><option>3D proje için teklif istiyorum</option></select></div>
+            <div class="field full"><label for="message">Projen hakkında</label><textarea id="message" name="message" placeholder="Ne yapmak istiyorsun? Kısaca anlat..." required></textarea></div>
+            <div class="form-foot"><button class="button button-dark" type="submit">Proje özetini hazırla <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button><span class="form-status" id="formStatus" role="status" aria-live="polite"></span></div>
+            <p class="form-note">Bu önizleme sürümünde form bilgileri sunucuya gönderilmez. Site yayına alınmadan önce e-posta veya güvenli form servisi bağlanmalıdır.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <a class="footer-brand" href="#anasayfa" aria-label="Başa dön">
+        <svg class="brand-mark" viewBox="0 0 80 80" aria-hidden="true"><path fill="currentColor" d="M13 8H71L60 20H28V31H48L36 43H28V64L13 78V8Z"/><path fill="#8EDCFF" d="M35 35H57L35 57V35Z"/></svg>
+        <span class="brand-copy"><span class="brand-name">FMT.</span><span class="brand-sub">VISUAL STUDIO</span></span>
+      </a>
+      <span class="footer-copy">© <span id="year"></span> FMT Visual. Tüm hakları saklıdır.</span>
+      <div class="footer-links"><a href="#hizmetler">Hizmetler</a><a href="#projeler">Konseptler</a><a href="#paketler">Paketler</a><a href="#iletisim">İletişim</a></div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var year = document.getElementById('year');
+      if (year) year.textContent = new Date().getFullYear();
+
+      var menuButton = document.getElementById('menuToggle');
+      var navLinks = document.getElementById('navLinks');
+      if (menuButton && navLinks) {
+        menuButton.addEventListener('click', function () {
+          var open = navLinks.classList.toggle('open');
+          menuButton.setAttribute('aria-expanded', String(open));
+          menuButton.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+        });
+        navLinks.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            navLinks.classList.remove('open');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Menüyü aç');
+          });
+        });
+      }
+
+      var form = document.getElementById('contactForm');
+      var status = document.getElementById('formStatus');
+      if (form && status) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          var data = new FormData(form);
+          var summary = [
+            'FMT Visual proje özeti',
+            'Ad: ' + data.get('name'),
+            'E-posta: ' + data.get('email'),
+            'Hizmet: ' + data.get('service'),
+            'Bütçe: ' + (data.get('budget') || 'Belirtilmedi'),
+            'Proje: ' + data.get('message')
+          ].join('\n');
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(summary).then(function () {
+              status.textContent = 'Proje özeti kopyalandı. Canlı gönderim bağlantısı henüz eklenmedi.';
+            }).catch(function () {
+              status.textContent = 'Özet hazırlandı; canlı gönderim bağlantısı henüz eklenmedi.';
+            });
+          } else {
+            status.textContent = 'Özet hazırlandı; canlı gönderim bağlantısı henüz eklenmedi.';
+          }
+        });
+      }
+
+      var revealItems = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('js-motion');
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -28px 0px' });
+        revealItems.forEach(function (item) { observer.observe(item); });
+      }
+    })();
+  </script>
+</body>
+</html>
