@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f9fa">
-  <meta name="description" content="FMT Visual; markalar için modern web tasarım, kullanıcı deneyimi ve 3D görselleştirme çözümleri üretir.">
+  <meta name="description" content="FMT Visual; endüstriyel tasarım, ürün geliştirme, 3D modelleme ve modern web deneyimleri üretir.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="FMT Visual — Dijitalde güçlü bir ilk izlenim">
-  <meta property="og:description" content="Modern web tasarım ve etkileyici 3D görselleştirmeler.">
+  <meta property="og:description" content="Endüstriyel tasarım, ürün fikirleri ve etkileyici 3D görselleştirmeler.">
   <meta property="og:site_name" content="FMT Visual">
   <title>FMT Visual — Web Tasarım &amp; 3D Görselleştirme</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -153,6 +153,49 @@
     .project-meta p { margin: 6px 0 0; color: var(--muted); font-size: 11px; }
     .project-type { flex: none; color: #65737e; border: 1px solid #d6e0e5; padding: 6px 8px; border-radius: 99px; font-size: 9px; font-weight: 750; }
     .project-disclaimer { margin: 26px 0 0; color: #78858e; font-size: 11px; }
+
+    .industrial-section { background: #fff; }
+    .industrial-layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
+    .model-stage { position: relative; min-height: 430px; aspect-ratio: 1.05 / 1; overflow: hidden; isolation: isolate; border: 1px solid #e1ebef; border-radius: 28px; background: radial-gradient(circle at 70% 18%, rgba(142,220,255,.48), transparent 34%), linear-gradient(145deg, #eef9fd, #fbfcfd 58%, #e8f0f3); }
+    .model-grid { position: absolute; inset: 0; opacity: .34; background-image: linear-gradient(rgba(91,145,166,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(91,145,166,.12) 1px, transparent 1px); background-size: 32px 32px; mask-image: linear-gradient(135deg, black, transparent 86%); }
+    .model-tag { position: absolute; z-index: 5; top: 20px; left: 20px; padding: 8px 11px; border: 1px solid rgba(255,255,255,.9); border-radius: 99px; background: rgba(255,255,255,.78); color: #53616c; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+    .model-orbit { position: absolute; border: 1px solid rgba(74,185,232,.35); border-radius: 50%; pointer-events: none; }
+    .model-orbit.orbit-one { width: 320px; height: 104px; top: 42%; left: calc(50% - 160px); transform: rotate(-27deg); }
+    .model-orbit.orbit-two { width: 255px; height: 255px; top: 18%; left: calc(50% - 127px); border-style: dashed; opacity: .48; }
+    .model-shadow { position: absolute; z-index: 1; width: 190px; height: 34px; left: 50%; bottom: 16%; transform: translateX(-50%); border-radius: 50%; background: rgba(37,75,95,.2); filter: blur(16px); }
+    .model-object { position: absolute; z-index: 2; width: 190px; height: 300px; left: 50%; top: 50%; transform: translate(-50%, -48%) rotateY(-20deg) rotateX(4deg); transform-style: preserve-3d; animation: model-turn 10s ease-in-out infinite alternate; }
+    .model-body { position: absolute; width: 170px; height: 244px; left: 10px; top: 32px; border-radius: 42px 42px 35px 35px; background: linear-gradient(90deg, #a7bbc5 0%, #edf4f7 15%, #fff 36%, #e6eef2 68%, #9db3bd 100%); box-shadow: inset 10px 0 16px rgba(255,255,255,.8), inset -12px 0 18px rgba(44,72,86,.15), 0 20px 40px rgba(30,62,79,.14); transform: translateZ(0); }
+    .model-body::before { content: ""; position: absolute; top: 36px; left: 50%; transform: translateX(-50%); width: 62px; height: 26px; border-radius: 10px; background: linear-gradient(180deg, #243844, #3a4c58); box-shadow: inset 0 1px 2px rgba(255,255,255,.15); }
+    .model-body::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); bottom: 35px; width: 105px; height: 72px; border-radius: 14px; background: repeating-linear-gradient(to bottom, rgba(55,83,96,.65) 0 2px, transparent 2px 7px); opacity: .5; }
+    .model-cap { position: absolute; z-index: 4; width: 186px; height: 34px; left: 2px; top: 4px; border-radius: 50%; background: linear-gradient(180deg, #fff, #c7d8df); box-shadow: 0 8px 14px rgba(36,66,80,.12); transform: translateZ(8px) rotateX(55deg); animation: model-cap-float 4s ease-in-out infinite alternate; }
+    .model-base { position: absolute; width: 150px; height: 28px; left: 20px; bottom: 14px; border-radius: 50%; background: linear-gradient(180deg, #d7e5eb, #92a9b4); box-shadow: 0 14px 22px rgba(37,66,80,.14); transform: translateZ(8px) rotateX(50deg); animation: model-base-float 4s ease-in-out infinite alternate; }
+    .model-ring { position: absolute; z-index: 2; width: 100px; height: 10px; left: 35px; top: 58px; border-radius: 50%; border: 2px solid rgba(142,220,255,.95); box-shadow: 0 0 14px rgba(74,185,232,.25); }
+    .model-indicator { position: absolute; z-index: 3; width: 6px; height: 6px; left: calc(50% + 19px); top: 46px; border-radius: 50%; background: #8edcff; box-shadow: 0 0 0 4px rgba(142,220,255,.14); }
+    .model-callout { position: absolute; z-index: 5; display: flex; align-items: center; gap: 8px; padding: 9px 12px; border: 1px solid rgba(255,255,255,.9); border-radius: 99px; background: rgba(255,255,255,.88); box-shadow: 0 12px 24px rgba(31,66,83,.1); color: #52616c; font-size: 10px; font-weight: 750; }
+    .model-callout span { color: #3c9fc8; font-weight: 850; }
+    .model-callout.top { top: 26%; right: 5%; }
+    .model-callout.bottom { left: 5%; bottom: 21%; }
+    .industrial-copy h3 { margin: 15px 0 16px; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -.055em; }
+    .industrial-copy > p { color: var(--muted); font-size: 14px; line-height: 1.85; }
+    .industrial-points { display: grid; gap: 13px; list-style: none; padding: 0; margin: 24px 0 26px; }
+    .industrial-points li { display: flex; align-items: start; gap: 10px; color: #4f606b; font-size: 12px; line-height: 1.65; }
+    .industrial-points svg { flex: none; width: 16px; height: 16px; margin-top: 2px; color: #3d9fc6; }
+    .industrial-copy .concept-note { margin-top: 15px; color: #85919a; font-size: 10px; line-height: 1.7; }
+    .opportunity-section { background: #eef3f5; }
+    .need-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; }
+    .need-card { min-width: 0; overflow: hidden; border: 1px solid #e0e8ec; border-radius: 20px; background: #fff; transition: transform .25s var(--ease), box-shadow .25s ease; }
+    .need-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .need-image { aspect-ratio: 1.15 / 1; overflow: hidden; background: #dce7ec; }
+    .need-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s var(--ease); }
+    .need-card:hover .need-image img { transform: scale(1.045); }
+    .need-content { padding: 19px 18px 21px; }
+    .need-tag { display: inline-flex; padding: 6px 8px; border-radius: 99px; background: var(--ice-pale); color: #377f9f; font-size: 9px; font-weight: 800; letter-spacing: .04em; }
+    .need-content h3 { margin: 13px 0 8px; font-size: 16px; line-height: 1.25; letter-spacing: -.04em; }
+    .need-content p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
+    @keyframes model-turn { from { transform: translate(-50%, -48%) rotateY(-20deg) rotateX(4deg); } to { transform: translate(-50%, -48%) rotateY(20deg) rotateX(1deg); } }
+    @keyframes model-cap-float { from { transform: translateY(-3px) translateZ(8px) rotateX(55deg); } to { transform: translateY(-12px) translateZ(18px) rotateX(55deg); } }
+    @keyframes model-base-float { from { transform: translateY(2px) translateZ(8px) rotateX(50deg); } to { transform: translateY(7px) translateZ(12px) rotateX(50deg); } }
+
     .process-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; counter-reset: steps; }
     .process-step { position: relative; padding: 22px 18px 18px 0; border-top: 1px solid #cfdbe1; counter-increment: steps; }
     .process-step::before { content: "0" counter(steps); display: block; color: #4ca9cf; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
@@ -229,6 +272,9 @@
       .services-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
       .service-card:last-child { grid-column: 1 / -1; min-height: 230px; }
       .portfolio-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .industrial-layout { gap: 26px; }
+      .model-stage { min-height: 390px; }
+      .need-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
       .project-card:first-child { grid-column: 1 / -1; }
       .project-card:first-child .project-art { aspect-ratio: 1.6 / 1; }
       .faq-grid { gap: 35px; }
@@ -259,6 +305,11 @@
       .trust-items { justify-content: flex-start; flex-wrap: wrap; gap: 13px 20px; }
       .trust-items span { font-size: 10px; }
       .services-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .industrial-layout { grid-template-columns: 1fr; gap: 28px; }
+      .model-stage { min-height: 360px; aspect-ratio: 1 / .92; }
+      .model-object { transform: translate(-50%, -48%) scale(.92) rotateY(-20deg) rotateX(4deg); }
+      .need-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+      .need-content { padding: 15px 13px 17px; }
       .service-card, .service-card:last-child { min-height: 0; grid-column: auto; padding: 24px; }
       .portfolio-grid { grid-template-columns: 1fr; }
       .project-card:first-child { grid-column: auto; }
@@ -287,6 +338,10 @@
       .hero-art { min-height: 320px; }
       .orb { width: 158px; height: 158px; }
       .render-window { width: 78%; }
+      .need-grid { grid-template-columns: 1fr; }
+      .model-callout { padding: 8px 9px; font-size: 9px; }
+      .model-callout.top { right: 3%; }
+      .model-callout.bottom { left: 3%; }
       .floating-note { display: none; }
       .project-meta { flex-direction: column; gap: 9px; }
     }
@@ -305,7 +360,8 @@
       </a>
       <div class="nav-links" id="navLinks">
         <a href="#hizmetler">Hizmetler</a>
-        <a href="#projeler">Seçili işler</a>
+        <a href="#endustriyel">3D &amp; ürün</a>
+        <a href="#urun-fikirleri">Ürün fikirleri</a>
         <a href="#surec">Süreç</a>
         <a href="#paketler">Paketler</a>
       </div>
@@ -321,8 +377,8 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <div class="hero-tag"><span class="status-dot"></span> Bağımsız yaratıcı stüdyo</div>
-          <h1>Dijitalde güçlü bir <span class="accent">ilk izlenim.</span></h1>
-          <p>Markalar için modern web siteleri ve etkileyici 3D görselleştirmeler tasarlıyorum. İyi görünen, hızlı çalışan ve amacına hizmet eden dijital deneyimler.</p>
+          <h1>Fikirden forma, <span class="accent">güçlü sunuma.</span></h1>
+          <p>Endüstriyel tasarım odağıyla ürün fikirlerini 3D modelleme ve görselleştirmeyle somutlaştırıyor; markalar için modern, hızlı ve amacına hizmet eden web deneyimleri tasarlıyorum.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#iletisim">Projenizi anlatalım <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
             <a class="button button-quiet" href="#projeler">Çalışmaları keşfet</a>
@@ -330,7 +386,7 @@
           <div class="hero-notes">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Mobil öncelikli</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Hız odaklı</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Özgün tasarım</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Ürün odaklı</span>
           </div>
         </div>
         <div class="hero-art" aria-label="Web tasarım ve 3D görselleştirme konsept illüstrasyonu">
@@ -362,32 +418,97 @@
     <section class="section" id="hizmetler">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">Ne yapıyorum?</span><h2>İyi fikirleri <span class="accent">iyi deneyimlere</span> dönüştürüyorum.</h2></div>
-          <p>İhtiyacın ister yeni bir web sitesi ister ürününü anlatan güçlü bir görsel olsun; her projeye net bir amaç ve sade bir tasarım yaklaşımıyla başlıyorum.</p>
+          <div><span class="eyebrow">Ne yapıyorum?</span><h2>Ürünü de markayı da <span class="accent">doğru anlatıyorum.</span></h2></div>
+          <p>Endüstriyel tasarım, 3D görselleştirme ve web deneyimini; gerçek ihtiyaç, net işlev ve sade bir görsel dille bir araya getiriyorum.</p>
         </div>
         <div class="services-grid">
           <article class="service-card reveal">
             <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01M13 6.5h.01M8 13h4M8 16h8"/></svg></div>
-            <h3>Web tasarım &amp; geliştirme</h3>
-            <p>Markanı doğru anlatan, mobilde kusursuz çalışan ve ziyaretçiyi aksiyona yönlendiren modern web siteleri.</p>
-            <ul><li>Kurumsal web sitesi</li><li>Landing page</li><li>Hız &amp; temel SEO</li></ul>
+            <h3>Endüstriyel tasarım</h3>
+            <p>Kullanıcı ihtiyacından başlayıp ürünün formunu, oranlarını ve malzeme karakterini birlikte düşünen ürün tasarımı yaklaşımı.</p>
+            <ul><li>Ürün konsepti</li><li>Form &amp; CMF</li><li>Kullanıcı odaklılık</li></ul>
           </article>
           <article class="service-card reveal">
             <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21"/></svg></div>
-            <h3>3D modelleme &amp; görselleştirme</h3>
-            <p>Ürünleri, mekanları ve fikirleri daha anlaşılır ve etkileyici hale getiren özenli 3D görsel çalışmalar.</p>
-            <ul><li>Ürün görselleştirme</li><li>3D sahne</li><li>Tanıtım görselleri</li></ul>
+            <h3>3D modelleme &amp; ürün animasyonu</h3>
+            <p>Ürün fikirlerini gerçekçi render’lar, parçalı görünüm ve kısa animasyonlarla daha anlaşılır hale getiren 3D sunumlar.</p>
+            <ul><li>Ürün render’ı</li><li>3D animasyon</li><li>Sunum görselleri</li></ul>
           </article>
           <article class="service-card reveal">
             <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="16" r="2"/></svg></div>
-            <h3>Dijital tasarım</h3>
-            <p>Web ve görsel dilini tamamlayan; markanın her temas noktasında tutarlı görünmesini sağlayan tasarımlar.</p>
-            <ul><li>Kampanya görselleri</li><li>Sunum tasarımı</li><li>Görsel sistem</li></ul>
+            <h3>Web tasarım &amp; dijital deneyim</h3>
+            <p>Markanı net anlatan, mobilde hızlı çalışan ve ziyaretçiyi doğru aksiyona yönlendiren modern web siteleri.</p>
+            <ul><li>Kurumsal web sitesi</li><li>Landing page</li><li>Hız &amp; temel SEO</li></ul>
           </article>
         </div>
       </div>
     </section>
 
+
+    <section class="section industrial-section" id="endustriyel">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">Endüstriyel tasarım &amp; 3D</span><h2>Ürünün formunu, <span class="accent">işleviyle</span> birlikte düşünüyorum.</h2></div>
+          <p>İyi ürün tasarımı; doğru ihtiyacı bulmak, kullanımı sadeleştirmek ve fikri anlaşılır bir görsel dile dönüştürmekle başlar.</p>
+        </div>
+        <div class="industrial-layout">
+          <div class="model-stage reveal" role="img" aria-label="Masaüstü cihaz için animasyonlu 3D ürün formu konsepti">
+            <div class="model-grid"></div>
+            <span class="model-tag">PRODUCT STUDY / 01</span>
+            <div class="model-orbit orbit-one"></div>
+            <div class="model-orbit orbit-two"></div>
+            <div class="model-shadow"></div>
+            <div class="model-object" aria-hidden="true">
+              <div class="model-cap"></div>
+              <div class="model-body"><span class="model-ring"></span><span class="model-indicator"></span></div>
+              <div class="model-base"></div>
+            </div>
+            <div class="model-callout top"><span>01</span> Modüler üst kapak</div>
+            <div class="model-callout bottom"><span>02</span> Durum göstergesi</div>
+          </div>
+          <div class="industrial-copy reveal">
+            <span class="eyebrow">Konsept ürün / form çalışması</span>
+            <h3>Bir ürün yalnızca güzel değil, anlaşılır ve kullanılabilir de olmalı.</h3>
+            <p>Bu temsili masaüstü cihaz konsepti; küçük ev ve çalışma alanlarında sağlık, konfor ve günlük kullanım ihtiyaçlarından ilham alıyor. Amaç, ürünün formunu ve kullanım fikrini daha ilk bakışta anlatmak.</p>
+            <ul class="industrial-points">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg><span><strong>İhtiyaç ve kullanım senaryosu:</strong> ürünün hangi sorunu çözdüğünü netleştirme.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg><span><strong>Form, renk ve malzeme:</strong> ürün karakterini tutarlı hale getirme.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg><span><strong>3D sunum ve animasyon:</strong> fikri müşteri, ekip veya üretici için görünür kılma.</span></li>
+            </ul>
+            <a class="button button-primary" href="#iletisim">Ürün fikrini konuşalım <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <p class="concept-note">Animasyon, tasarım yaklaşımını göstermek için hazırlanmış temsili bir CSS görselleştirmesidir; gerçek CAD modeli veya tamamlanmış müşteri işi değildir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section opportunity-section" id="urun-fikirleri">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="eyebrow">İhtiyaç odaklı ürün alanları</span><h2>Günlük sorunlardan, <span class="accent">güçlü ürün fikirleri.</span></h2></div>
+          <p>Trend araştırmasını doğrudan ürün fikrine çevirmek için dört başlangıç alanı: pratiklik, ergonomi, uzun ömür ve prototipleme.</p>
+        </div>
+        <div class="need-grid">
+          <article class="need-card reveal">
+            <div class="need-image"><img src="https://images.unsplash.com/photo-1757039068319-9a2591965a71?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Mavi tonlarda minimalist kişisel bakım cihazı ürün görseli" width="1200" height="1000" loading="lazy" decoding="async"></div>
+            <div class="need-content"><span class="need-tag">Sağlık · günlük yaşam</span><h3>Küçük ev ve bakım cihazları</h3><p>Kolay temizlenen, kullanımı anlaşılır ve günlük rutini kolaylaştıran kompakt ürünler.</p></div>
+          </article>
+          <article class="need-card reveal">
+            <div class="need-image"><img src="https://images.unsplash.com/photo-1761123261084-53c40fe1e607?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Ergonomik masaüstü ve dijital çalışma alanı" width="1200" height="1000" loading="lazy" decoding="async"></div>
+            <div class="need-content"><span class="need-tag">Ergonomi · çalışma</span><h3>Masaüstü aksesuarları</h3><p>Cihaz standı, kablo yönetimi, modüler düzenleme ve daha rahat çalışma deneyimi.</p></div>
+          </article>
+          <article class="need-card reveal">
+            <div class="need-image"><img src="https://images.unsplash.com/photo-1764740109279-c7a8abd78821?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Teknik çizimler, tasarım araçları ve ürün geliştirme masası" width="1200" height="1000" loading="lazy" decoding="async"></div>
+            <div class="need-content"><span class="need-tag">Uzun ömür · malzeme</span><h3>Modüler ve sürdürülebilir ürünler</h3><p>Parça değişimi, kolay bakım, dayanıklılık ve malzeme kararlarını tasarımın parçası yapmak.</p></div>
+          </article>
+          <article class="need-card reveal">
+            <div class="need-image"><img src="https://images.unsplash.com/photo-1756723901890-4d8a4b4cddaf?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Bilgisayar ekranında dijital model bulunan 3D yazıcı ve prototipleme masası" width="1200" height="1000" loading="lazy" decoding="async"></div>
+            <div class="need-content"><span class="need-tag">Prototip · üretim</span><h3>3D modelleme ve prototipleme</h3><p>Formu erkenden test etmek, fikirleri sunmak ve üretime geçiş kararlarını desteklemek.</p></div>
+          </article>
+        </div>
+        <p class="project-disclaimer">Fotoğraflar Unsplash lisansı kapsamında kullanılan stok referans görselleridir; FMT Visual’ın tamamlanmış müşteri işleri olarak sunulmaz. Bu alanlar araştırmaya dayalı başlangıç fikirleridir, satış garantisi değildir.</p>
+      </div>
+    </section>
     <section class="section portfolio" id="projeler">
       <div class="container">
         <div class="section-head reveal">
@@ -525,7 +646,7 @@
         <span class="brand-copy"><span class="brand-name">FMT.</span><span class="brand-sub">VISUAL STUDIO</span></span>
       </a>
       <span class="footer-copy">© <span id="year"></span> FMT Visual. Tüm hakları saklıdır.</span>
-      <div class="footer-links"><a href="#hizmetler">Hizmetler</a><a href="#projeler">Konseptler</a><a href="#paketler">Paketler</a><a href="#iletisim">İletişim</a></div>
+      <div class="footer-links"><a href="#hizmetler">Hizmetler</a><a href="#endustriyel">3D &amp; ürün</a><a href="#urun-fikirleri">Ürün fikirleri</a><a href="#paketler">Paketler</a><a href="#iletisim">İletişim</a></div>
     </div>
   </footer>
 
