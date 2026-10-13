@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f9fa">
-  <meta name="description" content="FMT Visual; endüstriyel tasarım, ürün geliştirme, 3D modelleme ve modern web deneyimleri üretir.">
+  <meta name="description" content="FMT Visual; sosyal medya tasarımı, 3D modelleme, modern web siteleri ve Meta reklam kreatiflerini tek bir yaratıcı stüdyoda buluşturur.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="FMT Visual — Endüstriyel Tasarım, 3D &amp; Web">
-  <meta property="og:description" content="Endüstriyel tasarım, ürün fikirleri ve etkileyici 3D görselleştirmeler.">
+  <meta property="og:title" content="FMT Visual — Sosyal Medya, 3D, Web &amp; Meta Ads">
+  <meta property="og:description" content="Markan için sosyal medya tasarımları, 3D görselleştirme, web siteleri ve Meta reklam kreatifleri.">
   <meta property="og:site_name" content="FMT Visual">
-  <title>FMT Visual — Endüstriyel Tasarım, 3D &amp; Web</title>
+  <title>FMT Visual — Sosyal Medya, 3D, Web &amp; Meta Ads</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <style>
     :root {
@@ -349,6 +349,122 @@
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
       .js-motion .reveal { opacity: 1; transform: none; }
     }
+  
+    /* FMT Visual — image-led creative studio refresh */
+    .hero-art.hero-collage { min-height: 500px; aspect-ratio: .98 / 1; overflow: visible; border: 0; background: transparent; }
+    .collage-backplate { position: absolute; inset: 7% 7% 8% 10%; border: 1px solid #deedf3; border-radius: 32px; background: radial-gradient(circle at 75% 16%, rgba(142,220,255,.48), transparent 35%), linear-gradient(140deg,#edf9fd,#f8fbfc 55%,#e6f0f3); transform: rotate(2deg); }
+    .hero-photo { position: absolute; z-index: 2; margin: 0; overflow: hidden; border: 6px solid rgba(255,255,255,.96); border-radius: 23px; background: #dceaf0; box-shadow: 0 25px 55px rgba(30,65,82,.18); }
+    .hero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .hero-photo figcaption { position: absolute; left: 13px; bottom: 13px; padding: 7px 9px; border-radius: 99px; background: rgba(255,255,255,.9); color: #344652; font-size: 8px; font-weight: 850; letter-spacing: .11em; }
+    .hero-photo-main { inset: 6% 5% 11% 21%; transform: rotate(3deg); animation: hero-photo-drift 7s ease-in-out infinite alternate; }
+    .hero-photo-main img { filter: saturate(.9); }
+    .hero-photo-social { z-index: 4; left: 0; top: 17%; width: 42%; height: 43%; transform: rotate(-7deg); animation: hero-photo-drift-left 6.5s ease-in-out infinite alternate; }
+    .hero-photo-web { z-index: 5; right: -1%; bottom: 1%; width: 55%; height: 32%; transform: rotate(4deg); animation: hero-photo-drift 7.5s .4s ease-in-out infinite alternate; }
+    .hero-photo-web img { object-position: center 48%; }
+    .hero-float-tag { position: absolute; z-index: 6; display: inline-flex; align-items: center; gap: 8px; padding: 10px 13px; border: 1px solid rgba(255,255,255,.92); border-radius: 99px; background: rgba(255,255,255,.92); color: #45545f; box-shadow: 0 10px 25px rgba(31,66,83,.1); font-size: 9px; font-weight: 850; letter-spacing: .1em; }
+    .hero-float-tag-top { top: 3%; right: 0; animation: float-soft 5s ease-in-out infinite alternate; }
+    .float-dot { width: 7px; height: 7px; border-radius: 50%; background: #6ac8eb; box-shadow: 0 0 0 4px rgba(106,200,235,.15); }
+    .hero-float-card { position: absolute; z-index: 7; right: 4%; top: 43%; display: flex; align-items: center; gap: 10px; min-width: 185px; padding: 12px 13px; border: 1px solid rgba(255,255,255,.95); border-radius: 16px; background: rgba(255,255,255,.94); box-shadow: 0 15px 35px rgba(31,66,83,.15); animation: float-soft 5.8s .3s ease-in-out infinite alternate; }
+    .float-card-icon { display: grid; place-items: center; width: 34px; height: 34px; flex: none; border-radius: 11px; color: #2d87ac; background: #e6f8ff; }
+    .float-card-icon svg { width: 18px; height: 18px; }
+    .hero-float-card strong, .hero-float-card small { display: block; }
+    .hero-float-card strong { font-size: 11px; }
+    .hero-float-card small { margin-top: 3px; color: #82909a; font-size: 9px; }
+    .float-card-bars { display: flex; align-items: end; gap: 3px; height: 23px; margin-left: auto; }
+    .float-card-bars i { display: block; width: 4px; border-radius: 4px; background: #8edcff; animation: bar-pulse 1.8s ease-in-out infinite alternate; }
+    .float-card-bars i:nth-child(1) { height: 9px; }
+    .float-card-bars i:nth-child(2) { height: 15px; animation-delay: .15s; }
+    .float-card-bars i:nth-child(3) { height: 11px; animation-delay: .3s; }
+    .float-card-bars i:nth-child(4) { height: 20px; animation-delay: .45s; }
+    .float-card-bars i:nth-child(5) { height: 14px; animation-delay: .6s; }
+    .hero-orbit { position: absolute; z-index: 1; border: 1px solid rgba(75,176,215,.25); border-radius: 50%; pointer-events: none; }
+    .hero-orbit-a { width: 300px; height: 95px; left: 6%; top: 36%; transform: rotate(-30deg); }
+    .hero-orbit-b { width: 200px; height: 200px; right: 7%; top: 17%; border-style: dashed; opacity: .55; animation: orbit-turn 32s linear infinite; }
+    .capability-marquee { overflow: hidden; padding: 17px 0 19px; border-bottom: 1px solid var(--line); background: #fff; }
+    .capability-track { display: flex; align-items: center; width: max-content; animation: capability-slide 32s linear infinite; }
+    .capability-track span { display: inline-flex; align-items: center; gap: 25px; padding: 0 24px; color: #62717c; white-space: nowrap; font-size: 10px; font-weight: 850; letter-spacing: .16em; }
+    .capability-track b { color: #59bfe7; font-size: 17px; }
+    .capability-marquee:hover .capability-track { animation-play-state: paused; }
+    .services-section { background: #f7f9fa; }
+    .services-visual-grid { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 15px; }
+    .service-visual-card { position: relative; display: block; min-width: 0; min-height: 385px; overflow: hidden; isolation: isolate; border: 1px solid rgba(30,55,70,.1); border-radius: 23px; background: #d8e8ee; box-shadow: 0 8px 22px rgba(27,54,69,.04); transition: transform .35s var(--ease), box-shadow .35s ease; }
+    .service-visual-card:hover { transform: translateY(-7px); box-shadow: 0 24px 45px rgba(27,54,69,.16); }
+    .service-visual-image { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
+    .service-visual-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg,rgba(13,30,42,.02) 10%,rgba(13,30,42,.04) 36%,rgba(13,30,42,.83) 100%); }
+    .service-visual-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .75s var(--ease), filter .45s ease; }
+    .service-visual-card:hover .service-visual-image img { transform: scale(1.08); filter: saturate(1.08); }
+    .service-number { position: absolute; top: 15px; left: 15px; padding: 8px 10px; border: 1px solid rgba(255,255,255,.6); border-radius: 99px; background: rgba(255,255,255,.84); color: #334651; font-size: 9px; font-weight: 850; letter-spacing: .08em; }
+    .service-visual-copy { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 20px 21px; color: #fff; }
+    .service-mini-label { display: block; margin-bottom: 10px; color: #c7f0ff; font-size: 9px; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
+    .service-visual-copy h3 { margin: 0 0 9px; font-size: clamp(19px,1.7vw,23px); line-height: 1.08; letter-spacing: -.05em; }
+    .service-visual-copy p { max-width: 250px; margin: 0; color: rgba(255,255,255,.82); font-size: 11px; line-height: 1.7; }
+    .service-arrow { display: grid; place-items: center; width: 34px; height: 34px; margin-top: 17px; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; background: rgba(255,255,255,.12); transition: transform .25s ease, background .25s ease; }
+    .service-arrow svg { width: 16px; height: 16px; }
+    .service-visual-card:hover .service-arrow { transform: translateX(5px); background: rgba(255,255,255,.25); }
+    .portfolio { overflow: hidden; background: #eef3f5; }
+    .visual-rail { overflow: hidden; width: 100%; padding: 6px 0 14px; }
+    .visual-rail-track { display: flex; align-items: stretch; gap: 17px; width: max-content; animation: gallery-drift 65s linear infinite; will-change: transform; }
+    .visual-rail:hover .visual-rail-track { animation-play-state: paused; }
+    .visual-tile { position: relative; flex: 0 0 265px; height: 345px; overflow: hidden; margin: 0; isolation: isolate; border: 5px solid rgba(255,255,255,.85); border-radius: 22px; background: #d8e8ee; box-shadow: 0 10px 28px rgba(31,56,70,.07); }
+    .visual-tile.tile-tall { height: 380px; }
+    .visual-tile.tile-wide { flex-basis: 335px; }
+    .visual-tile::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg,transparent 38%,rgba(13,28,39,.75)); }
+    .visual-tile img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease), filter .5s ease; }
+    .visual-tile:hover img { transform: scale(1.08); filter: saturate(1.08); }
+    .visual-tile figcaption { position: absolute; z-index: 1; left: 20px; right: 18px; bottom: 20px; display: grid; gap: 8px; color: white; }
+    .visual-tile figcaption span { color: #c9f0ff; font-size: 9px; font-weight: 850; letter-spacing: .12em; }
+    .visual-tile figcaption strong { font-size: 20px; line-height: 1.12; letter-spacing: -.045em; }
+    .portfolio .project-disclaimer { margin-top: 18px; }
+    .services-section .section-head { margin-bottom: 32px; }
+    @keyframes hero-photo-drift { from { transform: translateY(0) rotate(3deg); } to { transform: translateY(-10px) rotate(1deg); } }
+    @keyframes hero-photo-drift-left { from { transform: translateY(3px) rotate(-7deg); } to { transform: translateY(-9px) rotate(-4deg); } }
+    @keyframes float-soft { from { translate: 0 0; } to { translate: 0 -8px; } }
+    @keyframes bar-pulse { from { opacity: .5; transform: scaleY(.8); } to { opacity: 1; transform: scaleY(1.08); } }
+    @keyframes orbit-turn { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes capability-slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes gallery-drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (max-width: 1050px) {
+      .services-visual-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .service-visual-card { min-height: 410px; }
+      .hero-art.hero-collage { min-height: 430px; }
+      .hero-float-card { right: 0; min-width: 165px; }
+    }
+    @media (max-width: 720px) {
+      .hero-art.hero-collage { min-height: 380px; aspect-ratio: 1 / .93; margin: 0 2px; }
+      .hero-photo { border-width: 4px; border-radius: 18px; }
+      .hero-photo-social { width: 43%; height: 41%; top: 18%; }
+      .hero-photo-web { width: 56%; height: 31%; }
+      .hero-float-card { top: 43%; right: -1%; min-width: 153px; gap: 7px; padding: 9px; }
+      .hero-float-tag-top { right: -1%; font-size: 8px; }
+      .hero-orbit-a { width: 220px; left: 1%; }
+      .hero-orbit-b { width: 145px; height: 145px; }
+      .capability-track span { padding-inline: 17px; gap: 16px; font-size: 9px; }
+      .services-visual-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; }
+      .service-visual-card { min-height: 340px; border-radius: 18px; }
+      .service-visual-copy { padding: 17px 14px 16px; }
+      .service-visual-copy h3 { font-size: 20px; }
+      .service-visual-copy p { font-size: 10px; }
+      .service-mini-label { font-size: 8px; }
+      .service-number { top: 11px; left: 11px; padding: 7px 8px; font-size: 8px; }
+      .visual-rail-track { gap: 12px; }
+      .visual-tile { flex-basis: 225px; height: 300px; border-radius: 18px; }
+      .visual-tile.tile-tall { height: 330px; }
+      .visual-tile.tile-wide { flex-basis: 270px; }
+    }
+    @media (max-width: 390px) {
+      .services-visual-grid { grid-template-columns: 1fr; }
+      .service-visual-card { min-height: 380px; }
+      .hero-art.hero-collage { min-height: 320px; }
+      .hero-float-card { min-width: 140px; }
+      .float-card-icon { width: 29px; height: 29px; }
+      .float-card-bars { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .capability-track, .visual-rail-track, .hero-photo-main, .hero-photo-social, .hero-photo-web, .hero-float-tag-top, .hero-float-card, .hero-orbit-b, .float-card-bars i { animation: none !important; }
+      .visual-rail { overflow-x: auto; }
+      .visual-rail-track { transform: none !important; }
+    }
+
   </style>
 </head>
 <body>
@@ -360,10 +476,9 @@
       </a>
       <div class="nav-links" id="navLinks">
         <a href="#hizmetler">Hizmetler</a>
-        <a href="#endustriyel">3D &amp; ürün</a>
-        <a href="#urun-fikirleri">Ürün fikirleri</a>
+        <a href="#projeler">Görsel işler</a>
         <a href="#surec">Süreç</a>
-        <a href="#paketler">Paketler</a>
+        <a href="#paketler">Web paketleri</a>
       </div>
       <div class="nav-actions">
         <a class="button button-dark" href="#iletisim">Proje konuşalım <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
@@ -376,174 +491,131 @@
     <section class="hero" id="anasayfa">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="hero-tag"><span class="status-dot"></span> Bağımsız yaratıcı stüdyo</div>
-          <h1>Fikirden forma, <span class="accent">güçlü sunuma.</span></h1>
-          <p>Endüstriyel tasarım odağıyla ürün fikirlerini 3D modelleme ve görselleştirmeyle somutlaştırıyor; markalar için modern, hızlı ve amacına hizmet eden web deneyimleri tasarlıyorum.</p>
+          <div class="hero-tag"><span class="status-dot"></span> Sosyal · 3D · Web · Meta Ads</div>
+          <h1>Markanı dijitalde <span class="accent">öne çıkar.</span></h1>
+          <p>Sosyal medya tasarımları, etkileyici 3D görseller, modern web siteleri ve Meta reklam kreatifleri. Markanın dijitalde tutarlı, akılda kalıcı ve profesyonel görünmesi için tasarlıyorum.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#iletisim">Projenizi anlatalım <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-            <a class="button button-quiet" href="#projeler">Çalışmaları keşfet</a>
+            <a class="button button-primary" href="#iletisim">Projeyi konuşalım <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a class="button button-quiet" href="#hizmetler">Hizmetleri keşfet</a>
           </div>
           <div class="hero-notes">
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Mobil öncelikli</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Hız odaklı</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Ürün odaklı</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Marka odaklı</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Görsel odaklı</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Tek noktadan üretim</span>
           </div>
         </div>
-        <div class="hero-art" aria-label="Web tasarım ve 3D görselleştirme konsept illüstrasyonu">
-          <div class="art-grid"></div>
-          <div class="art-label"><span class="status-dot"></span> DESIGN IN PROGRESS</div>
-          <div class="orb"></div>
-          <div class="orb-ring"></div>
-          <div class="render-window">
-            <div class="window-bar"><i></i><i></i><i></i><span>FMT / VISUAL LAB</span></div>
-            <div class="window-body">
-              <div><div class="window-kicker">FORM MEETS FUNCTION</div><div class="window-title">Görsel olarak net.<br>Teknik olarak güçlü.</div><div class="window-line"></div><div class="window-line short"></div></div>
-              <div class="window-visual"></div>
-            </div>
+        <div class="hero-art hero-collage" aria-label="Sosyal medya, 3D tasarım, web ve reklam alanlarını gösteren görsel kolaj">
+          <div class="collage-backplate"></div>
+          <figure class="hero-photo hero-photo-main">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=1100&amp;q=82" alt="Renkli soyut 3D görsel tasarım" width="1100" height="1300" fetchpriority="high" decoding="async">
+            <figcaption>3D / VISUAL</figcaption>
+          </figure>
+          <figure class="hero-photo hero-photo-social">
+            <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&amp;fit=crop&amp;w=700&amp;q=78" alt="Sosyal medya içerik üretimi için yaratıcı çalışma alanı" width="700" height="850" loading="lazy" decoding="async">
+            <figcaption>SOCIAL CONTENT</figcaption>
+          </figure>
+          <figure class="hero-photo hero-photo-web">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=850&amp;q=78" alt="Web tasarımı yapılan bilgisayar çalışma alanı" width="850" height="600" loading="lazy" decoding="async">
+          </figure>
+          <div class="hero-float-tag hero-float-tag-top"><span class="float-dot"></span> CREATIVE STUDIO</div>
+          <div class="hero-float-card">
+            <span class="float-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 17 9 12l4 3 7-8"/><path d="M15 7h5v5"/></svg></span>
+            <span><strong>Meta Ads</strong><small>Creative direction</small></span>
+            <span class="float-card-bars"><i></i><i></i><i></i><i></i><i></i></span>
           </div>
-          <div class="floating-note"><span class="note-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="7"/></svg></span><span>Detaylarda fark yaratır.</span></div>
+          <div class="hero-orbit hero-orbit-a"></div>
+          <div class="hero-orbit hero-orbit-b"></div>
         </div>
       </div>
     </section>
 
     <div class="trust-strip">
       <div class="container trust-items">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg> Amaca uygun tasarım</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg> Her ekranda uyum</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v4m0 10v4M3 12h4m10 0h4"/><circle cx="12" cy="12" r="5"/></svg> Performans bilinci</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m4 16 5-5 3 3 7-8"/><path d="M14 6h5v5"/></svg> Sürdürülebilir yapı</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg> Sosyal medya tasarımı</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21"/></svg> 3D modelleme</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 6.5h.01M11 6.5h.01"/></svg> Web deneyimi</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18V6m0 12h16M7 14l3-4 3 2 5-6"/></svg> Meta reklam kreatifleri</span>
+      </div>
+    </div>
+    <div class="capability-marquee" aria-label="FMT Visual hizmetleri">
+      <div class="capability-track">
+        <span>SOCIAL MEDIA DESIGN <b>✳</b></span><span>3D PRODUCT VISUALS <b>✳</b></span><span>WEBSITE DESIGN <b>✳</b></span><span>META ADS CREATIVE <b>✳</b></span><span>ART DIRECTION <b>✳</b></span><span>CAMPAIGN VISUALS <b>✳</b></span>
+        <span aria-hidden="true">SOCIAL MEDIA DESIGN <b>✳</b></span><span aria-hidden="true">3D PRODUCT VISUALS <b>✳</b></span><span aria-hidden="true">WEBSITE DESIGN <b>✳</b></span><span aria-hidden="true">META ADS CREATIVE <b>✳</b></span><span aria-hidden="true">ART DIRECTION <b>✳</b></span><span aria-hidden="true">CAMPAIGN VISUALS <b>✳</b></span>
       </div>
     </div>
 
-    <section class="section" id="hizmetler">
+    <section class="section services-section" id="hizmetler">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">Ne yapıyorum?</span><h2>Ürünü de markayı da <span class="accent">doğru anlatıyorum.</span></h2></div>
-          <p>Endüstriyel tasarım, 3D görselleştirme ve web deneyimini; gerçek ihtiyaç, net işlev ve sade bir görsel dille bir araya getiriyorum.</p>
+          <div><span class="eyebrow">Hizmetler</span><h2>Markan için gereken <span class="accent">dört yaratıcı güç.</span></h2></div>
+          <p>Farklı ihtiyaçları tek bir görsel bakışla birleştiriyorum. Her hizmet, markanın anlatmak istediği şeyi daha net ve etkili göstermeye odaklanır.</p>
         </div>
-        <div class="services-grid">
-          <article class="service-card reveal">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m4 17 9.5-9.5 3 3L7 20H4v-3Z"/><path d="m13 8 2-2 3 3-2 2M4 4h5M4 4v5"/></svg></div>
-            <h3>Endüstriyel tasarım</h3>
-            <p>Kullanıcı ihtiyacından başlayıp ürünün formunu, oranlarını ve malzeme karakterini birlikte düşünen ürün tasarımı yaklaşımı.</p>
-            <ul><li>Ürün konsepti</li><li>Form &amp; CMF</li><li>Kullanıcı odaklılık</li></ul>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21"/><path d="M3 12a9 9 0 0 1 15.8-5.8M19 3v4h-4"/></svg></div>
-            <h3>3D modelleme &amp; ürün animasyonu</h3>
-            <p>Ürün fikirlerini gerçekçi render’lar, parçalı görünüm ve kısa animasyonlarla daha anlaşılır hale getiren 3D sunumlar.</p>
-            <ul><li>Ürün render’ı</li><li>3D animasyon</li><li>Sunum görselleri</li></ul>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="16" r="2"/></svg></div>
-            <h3>Web tasarım &amp; dijital deneyim</h3>
-            <p>Markanı net anlatan, mobilde hızlı çalışan ve ziyaretçiyi doğru aksiyona yönlendiren modern web siteleri.</p>
-            <ul><li>Kurumsal web sitesi</li><li>Landing page</li><li>Hız &amp; temel SEO</li></ul>
-          </article>
+        <div class="services-grid services-visual-grid">
+          <a class="service-visual-card reveal" href="#iletisim" aria-label="Sosyal medya tasarımı hizmetini incele">
+            <div class="service-visual-image"><img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Sosyal medya içerikleri için yaratıcı masaüstü" width="900" height="1200" loading="lazy" decoding="async"></div>
+            <span class="service-number">01 / SOCIAL</span>
+            <div class="service-visual-copy"><span class="service-mini-label">İçerik · Görsel kimlik</span><h3>Sosyal medya</h3><p>Gönderi tasarımları, hikâyeler, içerik serileri ve kampanya görselleri.</p><span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
+          </a>
+          <a class="service-visual-card reveal" href="#projeler" aria-label="3D modelleme ve ürün görselleştirme hizmetini incele">
+            <div class="service-visual-image"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Soyut 3D model ve materyal görselleştirmesi" width="900" height="1200" loading="lazy" decoding="async"></div>
+            <span class="service-number">02 / 3D</span>
+            <div class="service-visual-copy"><span class="service-mini-label">Ürün · Render · Animasyon</span><h3>3D modelleme</h3><p>Ürün render’ları, materyal çalışmaları, sahneler ve hareketli sunumlar.</p><span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
+          </a>
+          <a class="service-visual-card reveal" href="#paketler" aria-label="Web sitesi tasarımı hizmetini incele">
+            <div class="service-visual-image"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Web tasarım ve geliştirme çalışma alanı" width="900" height="1200" loading="lazy" decoding="async"></div>
+            <span class="service-number">03 / WEB</span>
+            <div class="service-visual-copy"><span class="service-mini-label">UI/UX · Kurumsal · Landing page</span><h3>Web sitesi</h3><p>Markanı anlatan, mobil uyumlu, hızlı ve amaca yönelik dijital deneyimler.</p><span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
+          </a>
+          <a class="service-visual-card reveal" href="#iletisim" aria-label="Meta reklam kurgusu ve kreatif tasarımı hizmetini incele">
+            <div class="service-visual-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Dijital kampanya ve performans verilerini gösteren ekran" width="900" height="1200" loading="lazy" decoding="async"></div>
+            <span class="service-number">04 / META ADS</span>
+            <div class="service-visual-copy"><span class="service-mini-label">Kampanya · Kreatif · Funnel</span><h3>Meta reklam kurgusu</h3><p>Reklam fikirleri, kampanya görselleri ve dönüşüm odaklı açılış sayfaları.</p><span class="service-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
+          </a>
         </div>
       </div>
     </section>
 
-
-    <section class="section industrial-section" id="endustriyel">
-      <div class="container">
-        <div class="section-head reveal">
-          <div><span class="eyebrow">Endüstriyel tasarım &amp; 3D</span><h2>Ürünün formunu, <span class="accent">işleviyle</span> birlikte düşünüyorum.</h2></div>
-          <p>İyi ürün tasarımı; doğru ihtiyacı bulmak, kullanımı sadeleştirmek ve fikri anlaşılır bir görsel dile dönüştürmekle başlar.</p>
-        </div>
-        <div class="industrial-layout">
-          <div class="model-stage reveal" role="img" aria-label="Masaüstü cihaz için animasyonlu 3D ürün formu konsepti">
-            <div class="model-grid"></div>
-            <span class="model-tag">PRODUCT STUDY / 01</span>
-            <div class="model-orbit orbit-one"></div>
-            <div class="model-orbit orbit-two"></div>
-            <div class="model-shadow"></div>
-            <div class="model-object" aria-hidden="true">
-              <div class="model-cap"></div>
-              <div class="model-body"><span class="model-ring"></span><span class="model-indicator"></span></div>
-              <div class="model-base"></div>
-            </div>
-            <div class="model-callout top"><span>01</span> Modüler üst kapak</div>
-            <div class="model-callout bottom"><span>02</span> Durum göstergesi</div>
-          </div>
-          <div class="industrial-copy reveal">
-            <span class="eyebrow">Konsept ürün / form çalışması</span>
-            <h3>Bir ürün yalnızca güzel değil, anlaşılır ve kullanılabilir de olmalı.</h3>
-            <p>Bu temsili masaüstü cihaz konsepti; küçük ev ve çalışma alanlarında sağlık, konfor ve günlük kullanım ihtiyaçlarından ilham alıyor. Amaç, ürünün formunu ve kullanım fikrini daha ilk bakışta anlatmak.</p>
-            <ul class="industrial-points">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg><span><strong>İhtiyaç ve kullanım senaryosu:</strong> ürünün hangi sorunu çözdüğünü netleştirme.</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg><span><strong>Form, renk ve malzeme:</strong> ürün karakterini tutarlı hale getirme.</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg><span><strong>3D sunum ve animasyon:</strong> fikri müşteri, ekip veya üretici için görünür kılma.</span></li>
-            </ul>
-            <a class="button button-primary" href="#iletisim">Ürün fikrini konuşalım <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-            <p class="concept-note">Animasyon, tasarım yaklaşımını göstermek için hazırlanmış temsili bir CSS görselleştirmesidir; gerçek CAD modeli veya tamamlanmış müşteri işi değildir.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section opportunity-section" id="urun-fikirleri">
-      <div class="container">
-        <div class="section-head reveal">
-          <div><span class="eyebrow">İhtiyaç odaklı ürün alanları</span><h2>Günlük sorunlardan, <span class="accent">güçlü ürün fikirleri.</span></h2></div>
-          <p>Trend araştırmasını doğrudan ürün fikrine çevirmek için dört başlangıç alanı: pratiklik, ergonomi, uzun ömür ve prototipleme.</p>
-        </div>
-        <div class="need-grid">
-          <article class="need-card reveal">
-            <div class="need-image"><img src="https://images.unsplash.com/photo-1757039068319-9a2591965a71?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Mavi tonlarda minimalist kişisel bakım cihazı ürün görseli" width="1200" height="1000" loading="lazy" decoding="async"></div>
-            <div class="need-content"><span class="need-tag">Sağlık · günlük yaşam</span><h3>Küçük ev ve bakım cihazları</h3><p>Kolay temizlenen, kullanımı anlaşılır ve günlük rutini kolaylaştıran kompakt ürünler.</p></div>
-          </article>
-          <article class="need-card reveal">
-            <div class="need-image"><img src="https://images.unsplash.com/photo-1761123261084-53c40fe1e607?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Ergonomik masaüstü ve dijital çalışma alanı" width="1200" height="1000" loading="lazy" decoding="async"></div>
-            <div class="need-content"><span class="need-tag">Ergonomi · çalışma</span><h3>Masaüstü aksesuarları</h3><p>Cihaz standı, kablo yönetimi, modüler düzenleme ve daha rahat çalışma deneyimi.</p></div>
-          </article>
-          <article class="need-card reveal">
-            <div class="need-image"><img src="https://images.unsplash.com/photo-1764740109279-c7a8abd78821?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Teknik çizimler, tasarım araçları ve ürün geliştirme masası" width="1200" height="1000" loading="lazy" decoding="async"></div>
-            <div class="need-content"><span class="need-tag">Uzun ömür · malzeme</span><h3>Modüler ve sürdürülebilir ürünler</h3><p>Parça değişimi, kolay bakım, dayanıklılık ve malzeme kararlarını tasarımın parçası yapmak.</p></div>
-          </article>
-          <article class="need-card reveal">
-            <div class="need-image"><img src="https://images.unsplash.com/photo-1756723901890-4d8a4b4cddaf?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Bilgisayar ekranında dijital model bulunan 3D yazıcı ve prototipleme masası" width="1200" height="1000" loading="lazy" decoding="async"></div>
-            <div class="need-content"><span class="need-tag">Prototip · üretim</span><h3>3D modelleme ve prototipleme</h3><p>Formu erkenden test etmek, fikirleri sunmak ve üretime geçiş kararlarını desteklemek.</p></div>
-          </article>
-        </div>
-        <p class="project-disclaimer">Fotoğraflar Unsplash lisansı kapsamında kullanılan stok referans görselleridir; FMT Visual’ın tamamlanmış müşteri işleri olarak sunulmaz. Bu alanlar araştırmaya dayalı başlangıç fikirleridir, satış garantisi değildir.</p>
-      </div>
-    </section>
     <section class="section portfolio" id="projeler">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">Seçili konseptler</span><h2>Fikrin görünür <span class="accent">hale geldiği</span> yer.</h2></div>
-          <p>Bu alan, marka estetiğini ve üretim yaklaşımını göstermek için hazırlanmış konsept sunumlardan oluşuyor.</p>
+          <div><span class="eyebrow">Görsel dünyamız</span><h2>Scroll et, keşfet. <span class="accent">Farklı işler, tek bakış.</span></h2></div>
+          <p>Sosyal içerikten 3D görselleştirmeye, web arayüzlerinden reklam kreatiflerine kadar farklı görsel dilleri bir araya getiren referans galerisi.</p>
         </div>
-        <div class="portfolio-grid">
-          <article class="project-card reveal">
-            <div class="project-art product" aria-label="Konsept ürün görselleştirmesi"></div>
-            <div class="project-meta"><div><h3>FORM / Product Study</h3><p>Ürün görselleştirme · 3D konsept</p></div><span class="project-type">3D</span></div>
-          </article>
-          <article class="project-card reveal">
-            <div class="project-art architecture" aria-label="Konsept mimari görselleştirme"><span class="arch-block a"></span><span class="arch-block b"></span><span class="arch-block c"></span><span class="arch-window"></span></div>
-            <div class="project-meta"><div><h3>VOLUME / Space</h3><p>Mimari form · Görsel konsept</p></div><span class="project-type">3D</span></div>
-          </article>
-          <article class="project-card reveal">
-            <div class="project-art branding" aria-label="Konsept marka kimliği sunumu"><div class="brand-sheet"><div class="sheet-mark">F<span>.</span>V</div><div class="sheet-lines"><i></i><i></i></div><div class="sheet-swatches"><i></i><i></i><i></i></div></div></div>
-            <div class="project-meta"><div><h3>STUDIO / Identity</h3><p>Görsel kimlik · Dijital tasarım</p></div><span class="project-type">Brand</span></div>
-          </article>
-        </div>
-        <p class="project-disclaimer">Not: Görseller konsept amaçlıdır; gerçek müşteri işi veya tamamlanmış proje olarak sunulmamaktadır. Portföy, yeni çalışmalarla güncellenecektir.</p>
       </div>
+      <div class="visual-rail" aria-label="FMT Visual hizmet kategorilerinden görsel referans galerisi">
+        <div class="visual-rail-track">
+          <figure class="visual-tile tile-tall"><img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Sosyal medya platformları ve içerik görseli" width="700" height="900" loading="lazy" decoding="async"><figcaption><span>01 / SOCIAL</span><strong>İçerik sistemleri</strong></figcaption></figure>
+          <figure class="visual-tile"><img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Soyut 3D dijital sanat görseli" width="700" height="800" loading="lazy" decoding="async"><figcaption><span>02 / 3D</span><strong>Ürün görselleştirme</strong></figcaption></figure>
+          <figure class="visual-tile tile-wide"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Modern web tasarım ekranı" width="900" height="800" loading="lazy" decoding="async"><figcaption><span>03 / WEB</span><strong>Dijital deneyimler</strong></figcaption></figure>
+          <figure class="visual-tile"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Dijital reklam performans analitiği" width="700" height="800" loading="lazy" decoding="async"><figcaption><span>04 / META ADS</span><strong>Kampanya kurgusu</strong></figcaption></figure>
+          <figure class="visual-tile tile-tall"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Renk ve grafik tasarım çalışmaları" width="700" height="900" loading="lazy" decoding="async"><figcaption><span>05 / ART DIRECTION</span><strong>Marka dili</strong></figcaption></figure>
+          <figure class="visual-tile"><img src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Dijital tasarım ve yaratıcı çalışma ortamı" width="700" height="800" loading="lazy" decoding="async"><figcaption><span>06 / DESIGN</span><strong>Görsel sistemler</strong></figcaption></figure>
+          <figure class="visual-tile tile-wide"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Marka ve kampanya tasarımı için yaratıcı stüdyo" width="900" height="800" loading="lazy" decoding="async"><figcaption><span>07 / CAMPAIGN</span><strong>Reklam kreatifleri</strong></figcaption></figure>
+          <figure class="visual-tile"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Minimal yaratıcı ofis ve tasarım ortamı" width="700" height="800" loading="lazy" decoding="async"><figcaption><span>08 / STUDIO</span><strong>Yaratıcı süreç</strong></figcaption></figure>
+          <figure class="visual-tile tile-tall" aria-hidden="true"><img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" width="700" height="900" loading="lazy" decoding="async"><figcaption><span>01 / SOCIAL</span><strong>İçerik sistemleri</strong></figcaption></figure>
+          <figure class="visual-tile" aria-hidden="true"><img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" width="700" height="800" loading="lazy" decoding="async"><figcaption><span>02 / 3D</span><strong>Ürün görselleştirme</strong></figcaption></figure>
+          <figure class="visual-tile tile-wide" aria-hidden="true"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="" width="900" height="800" loading="lazy" decoding="async"><figcaption><span>03 / WEB</span><strong>Dijital deneyimler</strong></figcaption></figure>
+          <figure class="visual-tile" aria-hidden="true"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" width="700" height="800" loading="lazy" decoding="async"><figcaption><span>04 / META ADS</span><strong>Kampanya kurgusu</strong></figcaption></figure>
+          <figure class="visual-tile tile-tall" aria-hidden="true"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" width="700" height="900" loading="lazy" decoding="async"><figcaption><span>05 / ART DIRECTION</span><strong>Marka dili</strong></figcaption></figure>
+          <figure class="visual-tile" aria-hidden="true"><img src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" width="700" height="800" loading="lazy" decoding="async"><figcaption><span>06 / DESIGN</span><strong>Görsel sistemler</strong></figcaption></figure>
+          <figure class="visual-tile tile-wide" aria-hidden="true"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="" width="900" height="800" loading="lazy" decoding="async"><figcaption><span>07 / CAMPAIGN</span><strong>Reklam kreatifleri</strong></figcaption></figure>
+          <figure class="visual-tile" aria-hidden="true"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" width="700" height="800" loading="lazy" decoding="async"><figcaption><span>08 / STUDIO</span><strong>Yaratıcı süreç</strong></figcaption></figure>
+        </div>
+      </div>
+      <div class="container"><p class="project-disclaimer">Galeri stok görsellerle hazırlanmış görsel referans alanıdır; tamamlanmış müşteri işleri olarak sunulmaz. Gerçek projeler, üretildikçe özgün çalışmalarla değiştirilecektir.</p></div>
     </section>
 
     <section class="section" id="surec">
       <div class="container">
         <div class="section-head reveal">
           <div><span class="eyebrow">Çalışma süreci</span><h2>Net bir plan. <span class="accent">Sürprizsiz</span> bir süreç.</h2></div>
-          <p>İlk görüşmeden teslim aşamasına kadar her adımın anlaşılır, ölçülü ve birlikte ilerleyen bir süreç olmasını önemsiyorum.</p>
+          <p>İster sosyal medya, ister 3D, web ya da reklam projesi olsun; yaratıcı fikri hedefe ve doğru üretim planına bağlıyorum.</p>
         </div>
         <div class="process-grid">
-          <article class="process-step reveal"><h3>Keşif</h3><p>Hedefleri, ihtiyaçları, hedef kitleyi ve projenin kapsamını netleştiriyoruz.</p></article>
-          <article class="process-step reveal"><h3>Plan &amp; tasarım</h3><p>İçerik yapısını ve görsel yönü belirleyip ilk tasarım yaklaşımını oluşturuyorum.</p></article>
-          <article class="process-step reveal"><h3>Üretim</h3><p>Tasarımı geliştiriyor, farklı ekranlarda kontrol ediyor ve gerekli iyileştirmeleri yapıyorum.</p></article>
-          <article class="process-step reveal"><h3>Kontrol &amp; teslim</h3><p>Son kontrolleri birlikte tamamlayıp kararlaştırılan kapsamda teslim ediyorum.</p></article>
+          <article class="process-step reveal"><h3>Strateji</h3><p>Markayı, hedef kitleyi, amacı ve projenin gerçek ihtiyacını netleştiriyoruz.</p></article>
+          <article class="process-step reveal"><h3>Yaratıcı yön</h3><p>Görsel dili, içerik yaklaşımını ve üretilecek tasarım formatlarını belirliyorum.</p></article>
+          <article class="process-step reveal"><h3>Üretim</h3><p>Görselleri, 3D çıktıları, web arayüzünü veya reklam kreatiflerini hazırlıyorum.</p></article>
+          <article class="process-step reveal"><h3>Kontrol &amp; teslim</h3><p>Son kontrolleri yapıp kararlaştırılan formatlarda teslim ediyorum.</p></article>
         </div>
       </div>
     </section>
@@ -601,13 +673,13 @@
 
     <section class="section" id="sss">
       <div class="container faq-grid">
-        <div class="faq-intro reveal"><span class="eyebrow">Merak edilenler</span><h2>Başlamadan önce bilmen gerekenler.</h2><p>Projenin kapsamını, zaman planını ve teslim detaylarını ilk görüşmede birlikte netleştiriyoruz.</p></div>
+        <div class="faq-intro reveal"><span class="eyebrow">Merak edilenler</span><h2>Hangi aşamada olursan ol, birlikte netleştirebiliriz.</h2><p>İhtiyacın tek bir tasarım ya da birden fazla hizmet olabilir. Önce hedefi belirleyip uygun kapsamı çıkarıyoruz.</p></div>
         <div class="faq-list reveal">
-          <details><summary>Web sitesi ne kadar sürede tamamlanır?</summary><p>Süre, sayfa sayısına ve içeriklerin hazır olmasına göre değişir. Kapsam netleştiğinde proje takvimini teklif aşamasında belirliyoruz.</p></details>
-          <details><summary>Site mobil cihazlarda düzgün çalışacak mı?</summary><p>Evet. Tasarım mobil, tablet ve masaüstü ekranlara uyumlu hazırlanır; temel performans ve kullanılabilirlik kontrolleri teslim öncesinde yapılır.</p></details>
-          <details><summary>Alan adı ve hosting fiyata dahil mi?</summary><p>Alan adı ve barındırma ihtiyaçları projeye göre ayrıca değerlendirilir. Mevcut alan adın varsa bağlantı ve yayına alma sürecinde yardımcı olabilirim.</p></details>
-          <details><summary>3D modelleme için nasıl fiyat alabilirim?</summary><p>Modelin türü, detay seviyesi, sahne sayısı ve istenen çıktı sayısı üzerinden kapsam belirlenir. İhtiyacını ilettiğinde projeye özel teklif hazırlanır.</p></details>
-          <details><summary>Projeye nasıl başlayabiliriz?</summary><p>İhtiyacını ve hedefini kısaca anlatman yeterli. Kapsamı netleştirip uygun yaklaşım ve tahmini takvim üzerinden ilerleyebiliriz.</p></details>
+          <details><summary>Sosyal medya için hangi tasarımları hazırlıyorsun?</summary><p>Gönderi ve hikâye tasarımları, içerik serileri, kampanya görselleri ve markanın görsel dilini tutarlı hale getiren tasarım setleri hazırlanabilir.</p></details>
+          <details><summary>3D modelleme ve animasyon hizmeti neleri kapsıyor?</summary><p>Projenin ihtiyacına göre ürün modelleme, materyal ve ışık çalışmaları, render, parçalı ürün sunumu veya kısa animasyon kapsamı belirlenir.</p></details>
+          <details><summary>Web sitesi paketleri hangi hizmetleri kapsıyor?</summary><p>Paketler web tasarımı için başlangıç seçenekleridir. Sayfa sayısı, içerik, özel işlevler ve yayına alma ihtiyaçları proje başında netleştirilir.</p></details>
+          <details><summary>Meta reklam kurgusu reklam bütçesini de içeriyor mu?</summary><p>Hayır. Reklam kreatifleri, kampanya yaklaşımı ve açılış sayfası gibi tasarım işleri ayrı kapsamlandırılır. Meta'ya ödenecek medya bütçesi ayrıca belirlenir; hesap yönetimi ve optimizasyon ihtiyacı teklifte netleştirilir.</p></details>
+          <details><summary>Birden fazla hizmeti aynı projede alabilir miyim?</summary><p>Evet. Örneğin sosyal medya kreatifleri, reklam görselleri ve bir landing page aynı kampanya hedefi etrafında birlikte planlanabilir.</p></details>
         </div>
       </div>
     </section>
@@ -617,8 +689,8 @@
         <div class="contact-panel reveal">
           <div class="contact-copy">
             <span class="eyebrow">Birlikte üretelim</span>
-            <h2>Bir sonraki iyi fikrin burada başlayabilir.</h2>
-            <p>Projenin neye ihtiyacı olduğunu anlat. İhtiyacı, kapsamı ve en doğru yaklaşımı birlikte netleştirelim.</p>
+            <h2>Markan için doğru görsel dili birlikte kuralım.</h2>
+            <p>Sosyal medya, 3D, web veya Meta reklam kurgusu… Hedefini anlat, ihtiyacına uygun yaratıcı planı birlikte oluşturalım.</p>
             <div class="contact-points">
               <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M3 12h18"/></svg> İhtiyaca göre çözüm</span>
               <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg> Şeffaf kapsam ve teklif</span>
@@ -628,8 +700,8 @@
           <form class="contact-form" id="contactForm">
             <div class="field"><label for="name">Adın</label><input id="name" name="name" autocomplete="name" placeholder="Adın soyadın" required></div>
             <div class="field"><label for="email">E-posta</label><input id="email" name="email" type="email" autocomplete="email" placeholder="ornek@mail.com" required></div>
-            <div class="field"><label for="service">İlgilendiğin hizmet</label><select id="service" name="service" required><option value="">Seçim yap</option><option>Web tasarım</option><option>3D modelleme</option><option>Dijital tasarım</option><option>Birden fazla hizmet</option></select></div>
-            <div class="field"><label for="budget">Tahmini bütçe</label><select id="budget" name="budget"><option value="">Henüz emin değilim</option><option>8.000 TL civarı</option><option>15.000 TL civarı</option><option>25.000 TL ve üzeri</option><option>3D proje için teklif istiyorum</option></select></div>
+            <div class="field"><label for="service">İlgilendiğin hizmet</label><select id="service" name="service" required><option value="">Seçim yap</option><option>Sosyal medya tasarımı</option><option>3D modelleme ve animasyon</option><option>Web sitesi tasarımı</option><option>Meta reklam kurgusu / kreatifleri</option><option>Birden fazla hizmet</option></select></div>
+            <div class="field"><label for="budget">Tahmini bütçe</label><select id="budget" name="budget"><option value="">Henüz emin değilim</option><option>8.000 TL civarı</option><option>15.000 TL civarı</option><option>25.000 TL ve üzeri</option><option>Sosyal medya / reklam kreatifleri için teklif istiyorum</option><option>3D proje için teklif istiyorum</option></select></div>
             <div class="field full"><label for="message">Projen hakkında</label><textarea id="message" name="message" placeholder="Ne yapmak istiyorsun? Kısaca anlat..." required></textarea></div>
             <div class="form-foot"><button class="button button-dark" type="submit">Proje özetini hazırla <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button><span class="form-status" id="formStatus" role="status" aria-live="polite"></span></div>
             <p class="form-note">Bu önizleme sürümünde form bilgileri sunucuya gönderilmez. Site yayına alınmadan önce e-posta veya güvenli form servisi bağlanmalıdır.</p>
@@ -646,7 +718,7 @@
         <span class="brand-copy"><span class="brand-name">FMT.</span><span class="brand-sub">VISUAL STUDIO</span></span>
       </a>
       <span class="footer-copy">© <span id="year"></span> FMT Visual. Tüm hakları saklıdır.</span>
-      <div class="footer-links"><a href="#hizmetler">Hizmetler</a><a href="#endustriyel">3D &amp; ürün</a><a href="#urun-fikirleri">Ürün fikirleri</a><a href="#paketler">Paketler</a><a href="#iletisim">İletişim</a></div>
+      <div class="footer-links"><a href="#hizmetler">Hizmetler</a><a href="#projeler">Görsel işler</a><a href="#surec">Süreç</a><a href="#paketler">Web paketleri</a><a href="#iletisim">İletişim</a></div>
     </div>
   </footer>
 
